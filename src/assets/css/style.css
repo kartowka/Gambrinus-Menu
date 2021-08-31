@@ -8,7 +8,7 @@ body {
   font-size: 18px;
   line-height: 0.8;
   font-weight: 300;
-  color: #999999;
+  color: #fff;
 }
 
 a {
@@ -442,16 +442,14 @@ textarea.form-control {
 }
 
 .menu-food-item .price {
-  text-align: left;
+  text-align: center;
   width: 100%;
-  text-align: right;
-
 }
 
 @media (min-width: 768px) {
   .menu-food-item .price {
     width: 70px;
-    text-align: right;
+    text-align: center;
   }
 }
 
