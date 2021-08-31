@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Colorlib Diner</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/aos.css">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="/assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/assets/fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="site-wrap">
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+          <div class="img_bg" style="background-image: url(img/slider-1.jpg);background-repeat: no-repeat;">
+            <div class="section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" data-aos="fade-up">
+    
+                    <div class="dropdown" style="text-align: center">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        aria-expanded="false"
+                        data-toggle="dropdown"
+                        type="button"
+                        style="background: var(--red)"
+                      >
+                        Language
+                      </button>
+                      <div class="dropdown-menu" style="text-align: center">
+                        <a class="dropdown-item" href="menu-hebrew.html" style="text-align: center">עברית</a
+                        ><a class="dropdown-item" href="#Russian" style="text-align: center">Русский</a
+                        ><a class="dropdown-item" href="menu-english.html" style="text-align: center">English</a>
+                      </div>
+                    </div>
+    
+                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: left;">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">Starters</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-seafood-tab" data-toggle="pill" href="#seafood" role="tab" aria-controls="pills-lunch" aria-selected="false">Sea Food</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-fish-tab" data-toggle="pill" href="#fish" role="tab" aria-controls="pills-dinner" aria-selected="false">Fish</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-dinner" aria-selected="false">Meat</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#others" role="tab" aria-controls="pills-dinner" aria-selected="false">Other</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3 style="color: white; text-align: left;">Gambrinus Salad</h3>
+                            <p style="color: white;text-align: left;">Cucumber, tomato, lettuce, onion and Bulgarian cheese on top</p>
+                          </div>
+                          <div class="price order-2" style="text-align: left;">
+                            <strong><%= price.salad_gambrinus %> ₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3 style="color: white;text-align: left;">Chips Gambrinus</h3>
+                            <p style="color: white;text-align: left;">Diced potatoes with Bulgarian cheese on top</p>
+                            <p style="color: white;text-align: left;">Options: cheese on top, cheese on the side, cheese only on half</p>
+                          </div>
+                          <div class="price order-2" style="text-align: left;">
+                            <strong>25/30₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3 style="color: white;text-align: left;">Potato in a creamy mushroom cream sauce</h3>
+                            <p style="color: white;text-align: left;">Sliced baked potato with creamy mushroom cream sauce</p>
+                          </div>
+                          <div class="price order-2" style="text-align: left;">
+                            <strong>50₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item" style="text-align: left;">
+                          <div class="text order-1 mb-3">
+                            <h3 style="color: white;">Mushrooms in a cream sauce with cheese</h3>
+                            <p style="color: white;">Fresh champignon mushrooms in a cream sauce with cheese</p>
+                          </div>
+                          <div class="price order-2"style="text-align: left;">
+                            <strong>50₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item"style="text-align: left;">
+                          <div class="text order-1 mb-3">
+                            <h3 style="color: white;">Gambrinus toast / toast with a selection of toppings</h3>
+                            <p style="color: white;">Toast with cheese and over mushroom cream sauce, toast with toppings to choose from</p>
+                            <p style="color: white;">Tomato, onion, bulgarian cheese, tomato </p>
+                            <p style="color: white;">Up to 3 extras to choose from *</p>
+                          </div>
+                          <div class="price order-2"style="text-align: left;">
+                            <strong>35₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                      </div>
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab">
+                        
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Jumbo Lump Crab Stack</a></h3>
+                            <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$12.49</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Jamaican Chicken Wings</a></h3>
+                            <p>Crisp tortilla and plantain chips covered with lightly spiced ground beef, melted cheese, pickled jalapeños, guacamole, sour cream and salsa.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$15.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Bahamian Seafood Chowder</a></h3>
+                            <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$10.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Grilled Chicken &amp; Tropical Fruit on Mixed Greens</a></h3>
+                            <p>Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$12.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                      </div>
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
+                        
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Grilled Top Sirlion Steak</a></h3>
+                            <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$18.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Steak Oscar</a></h3>
+                            <p>Crisp tortilla and plantain chips covered with lightly spiced ground beef, melted cheese, pickled jalapeños, guacamole, sour cream and salsa.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$23.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Skirt Steak Churrasco</a></h3>
+                            <p>A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$20.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h3><a href="#">Grilled Beef Steak</a></h3>
+                            <p>Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong>$20.99</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                      </div>
+                    </div>
+      
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/jquery.waypoints.min.js"></script>
+
+    <script src="/assets/js/bootstrap-datepicker.js"></script>
+    <script src="/assets/js/jquery.timepicker.min.js"></script>
+    <script src="/assets/js/jquery.stellar.min.js"></script>
+
+    <script src="/assets/js/aos.js"></script>
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
