@@ -34,25 +34,8 @@
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-md-8" data-aos="fade-up">
-    
-                    <div class="dropdown" style="text-align: center">
-                      <button
-                        class="btn btn-primary dropdown-toggle"
-                        aria-expanded="false"
-                        data-toggle="dropdown"
-                        type="button"
-                        style="background: var(--red)"
-                      >
-                        Language
-                      </button>
-                      <div class="dropdown-menu" style="text-align: center">
-                        <a class="dropdown-item" href="/" style="text-align: center">עברית</a
-                        ><a class="dropdown-item" href="#Russian" style="text-align: center">Русский</a
-                        ><a class="dropdown-item" href="english" style="text-align: center">English</a>
-                      </div>
-                    </div>
-    
-                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: right;">
+                    <%- include('partials/header'); %>    
+                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center;">
                       <li class="nav-item">
                         <a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">מנות פתיחה</a>
                       </li>
@@ -70,7 +53,7 @@
                       </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: right;color: white;">
+                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: center;color: white;">
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
                             <h3>סלט גמברינוס</h3>
@@ -121,7 +104,7 @@
                         </div> <!-- .menu-food-item -->
 
                       </div>
-                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" style="text-align: right;color: white;">
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" style="text-align: center;color: white;">
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
@@ -204,7 +187,7 @@
                         </div> <!-- .menu-food-item -->
     
                       </div>
-                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab"style="text-align: right;color: white;">
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab"style="text-align: center;color: white;">
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
@@ -245,7 +228,7 @@
                           </div>
                         </div> <!-- .menu-food-item -->
                         </div>
-                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab"style="text-align: right;color: white;">
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab"style="text-align: center;color: white;">
                         
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
@@ -328,7 +311,7 @@
 
                           </div>
 
-                          <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="pills-others-tab"style="text-align: right;color: white;">
+                          <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="pills-others-tab"style="text-align: center;color: white;">
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
@@ -389,6 +372,18 @@
                             </div> <!-- .menu-food-item -->
 
                             </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <%- include('partials/footer'); %>
+
+
+
 
       
     <script src="js/jquery-3.2.1.min.js"></script>
