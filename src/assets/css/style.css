@@ -5,12 +5,21 @@ html {
 body {
   background-image: url("/img/slider-1-1.jpg");
   font-family: "Open Sans", cursive;
-  font-size: 18px;
-  line-height: 0.8;
-  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
   color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
+.icon {
+  background: url('/img/hot.gif');
+  height: 40px;
+  width: 40px;
+  display:block;
+  margin: 0 auto;
+  /* Other styles here */
+}
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;

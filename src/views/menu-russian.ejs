@@ -35,7 +35,7 @@
                 <div class="row justify-content-center">
                   <div class="col-md-8" data-aos="fade-up">
                     <%- include('partials/header'); %>
-                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: right;">
+                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center;">
                       <li class="nav-item">
                         <a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">закуски</a>
                       </li>
@@ -56,7 +56,7 @@
                       <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: center;color: white;">
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>Салат Гамбринус</h3>
+                            <h2>Салат Гамбринус</h2>
                             <p">огурец, помидор, листья салата, лук и болгарский сыр</p>
                           </div>
                           <div class="price order-2">
@@ -65,7 +65,7 @@
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>Чипсы Гамбринус</h3>
+                            <h2>Чипсы Гамбринус</h2>
                             <p>Картофель нарезанный кубиками с болгарским сыром сверху </p>
                             <p>Варианты: сыр сверху, сыр на стороне, сыр только на половину </p>
                           </div>
@@ -75,8 +75,8 @@
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>תפוח אדמה ברוטב שמנת פטריות מוקרם</h3>
-                            <p>תפוח אדמה אפוי פרוס עם רוטב שמנת פטריות מוקרם</p>
+                            <h2>Картофель в "мундире" с грибным соусом В печи</h2>
+                            <p></p>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.mukram %>₪</strong>
@@ -84,8 +84,8 @@
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>פטריות ברוטב שמנת עם גבינה</h3>
-                            <p>פטריות טריות שמפניון ברוטב שמנת עם גבינה</p>
+                            <h2>Грибы в сливочном соусе с сыром</h2>
+                            <p></p>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.pitriyot %>₪</strong>
@@ -93,10 +93,7 @@
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>טוסט גמברינוס/טוסט עם מבחר תוספות</h3>
-                            <p>טוסט גבינה ומעל רוטב שמנת פטריות, טוסט עם תוספות לבחירה  </p>
-                            <p>עגבניה, בצל, בולגרית, עגבניה  </p>
-                            <p>עד 3 תוספות לבחירה *</p>
+                            <h2>Тост гамбринус/Тост с добавками</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.toast %>₪</strong>
@@ -104,12 +101,11 @@
                         </div> <!-- .menu-food-item -->
 
                       </div>
-                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" style="text-align: right;color: white;">
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" style="text-align: center;color: white;">
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>מיקס שרימפס וקלמרי</a></h3>
-                            <p>מגיע מטוגן בשמן עמוק עם רוטב בית בצד</p>
+                            <h2>Микс креветки и кальмары</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.mix %>₪</strong>
@@ -118,8 +114,7 @@
     
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>שרימפס מבושל 500 גר׳ </h3>
-                            <p>מבושל במים , שלמים לא מקולפים, מגיע עם רוטב בית</p>
+                            <h2>Креветки варёный 500 г</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.mevushal %>₪</strong>
@@ -128,8 +123,8 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>שרימפס בחמאה ושום </h3>
-                            <p>מגיע עם לחם</p>
+                            <i class="icon" aria-hidden="true"></i>                          
+                            <h2>Креветки в чесночном соусе</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.mahvat %>₪</strong>
@@ -138,8 +133,7 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>שרימפס / קלמרי ״על האש״ פיקנטי </h3>
-                            <p>שתי שיפודים לבחירה , אופציות חריף,לא חריף</p>
+                            <h2>Креветки кальмары на вертеле ״острый״</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.shipudim %>₪</strong>
@@ -148,8 +142,7 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>שרימפס מטוגן </h3>
-                            <p> שרימפס מצופה בפירורי לחם מטוגן בשמן עמוק</p>
+                            <h2>Креветки в сухарях жареные во фритюре</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.metugan %>₪</strong>
@@ -158,8 +151,7 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>קלמרי מטוגן </h3>
-                            <p> קלמרי חצוי מצופה בפירורי לחם ומטוגן בשמן עמוק</p>
+                            <h2>Кальмары в сухарях жареный во фритюре</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.kalamari %>₪</strong>
@@ -168,8 +160,7 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>סרטן הים 1 ק״ג </h3>
-                            <p> סרטנים שלמים חצויים לא מקולפים </p>
+                            <h2>Крабы морские варёный 1 кг</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.krab %>₪</strong>
@@ -178,7 +169,7 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>סרטן הנהרות 1 ק״ג</h3>
+                            <h2>Раки 1 кг</h2>
                             <p> </p>
                           </div>
                           <div class="price order-2">
@@ -187,12 +178,11 @@
                         </div> <!-- .menu-food-item -->
     
                       </div>
-                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab"style="text-align: right;color: white;">
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab"style="text-align: center;color: white;">
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>דניס מטוגן בשמן עמוק</h3>
-                            <p> מגיע עם סלט, צ׳יפס קוביות וחמאה</p>
+                            <h2>Дэнис во фритюре</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.denis %>₪</strong>
@@ -200,8 +190,7 @@
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>דניס בתנור</h3>
-                            <p> מגיע עם סלט, תפו״א וחמאה</p>
+                            <h2>Дэнис в печи</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.denis %>₪</strong>
@@ -210,8 +199,7 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>דגי ים מטוגנים 500 גר׳</h3>
-                            <p> מגיע עם סלט, צ׳יפס קוביות וחמאה</p>
+                            <h2>Жареный морские рыбки 500 г</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.bananot %>₪</strong>
@@ -220,20 +208,18 @@
 
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h3>פורל מעושן בתנור </h3>
-                            <p> מגיע עם סלט, תפו״א</p>
+                            <h2>Форель копчёный в печи 500 г</h2>
                           </div>
                           <div class="price order-2">
                             <strong><%= price.forel %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         </div>
-                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab"style="text-align: right;color: white;">
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab"style="text-align: center;color: white;">
                         
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>נתח קצבים עד 500 גר׳</h3>
-                              <p> מגיע עם סלט, תפו״א וחמאה</p>
+                              <h2>Телятина вырезка 500 г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.netah %>₪</strong>
@@ -241,8 +227,7 @@
                           </div> <!-- .menu-food-item -->
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>אנטריקוט מיושן 350/650 גר׳</h3>
-                              <p> מגיע עם סלט, תפו״א וחמאה</p>
+                              <h2>Телятина Антрекот 350/650г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.boded %>₪</strong>
@@ -251,8 +236,7 @@
   
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>אנטריקוט בתנור 350/650 גר׳</h3>
-                              <p> אנטריקוט ברוטב מעל בצל ושמיר , מגיע עם סלט,תפו״א וחמאה</p>
+                              <h2>Антрекот в печи 350/650г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.boded %>₪</strong>
@@ -261,8 +245,7 @@
   
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>צלעות לבן – ספריבס 900 גר׳  </h3>
-                              <p> מגיע עם סלט, תפו״א וחמאה</p>
+                              <h2>Рёбрышки свиные сперибс 900 г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.spareribs %>₪</strong>
@@ -271,8 +254,7 @@
 
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>סטייק צוואר לבן 700 גר׳</h3>
-                              <p> מגיע עם סלט, תפו״א וחמאה</p>
+                              <h2>Свиная шейная часть 700 г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.lavan %>₪</strong>
@@ -281,8 +263,7 @@
 
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>פילה לבן בתנור 450/950 גר׳</h3>
-                              <p>פילה ברוטב מעל בצל ושמיר , מגיע עם סלט,תפו״א וחמאה</p>
+                              <h2>Филе свиной в печи 450/950г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.file %>₪</strong>
@@ -291,8 +272,7 @@
                           
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>צלעות טלה 500 גר׳</h3>
-                              <p> מגיע עם סלט, תפו״א וחמאה</p>
+                              <h2>Рёбрышки бараний 500 г</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.file %>₪</strong>
@@ -301,8 +281,7 @@
 
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
-                              <h3>נקנקיות טלה ״על האש״</h3>
-                              <p>שתי נקניקיות לא חריפות, מגיע עם סלט , תפו״א וחמאה</p>
+                              <h2>Колбаски из баранины "На гриле"</h2>
                             </div>
                             <div class="price order-2">
                               <strong><%= price.naknikiyot %>₪</strong>
@@ -311,11 +290,21 @@
 
                           </div>
 
-                          <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="pills-others-tab"style="text-align: right;color: white;">
+                          <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="pills-others-tab"style="text-align: center;color: white;">
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
-                                <h3>בירה 0.3/0.5</h3>
+                                <i class="icon" aria-hidden="true"></i>                          
+                                <h2>Чейсер JAMESON</h2>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= price.jameson %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Пиво 0.3/0.5</h2>
                               </div>
                               <div class="price order-2">
                                 <strong><%= price.beer %>₪</strong>
@@ -324,9 +313,10 @@
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
-                                <h3>שתייה קלה</h3>
-                                <p>קוקה קולה,קוקה קולה זירו,ספרייט,ספרייט זירו,מירנדה,סודה,מי טוניק,הייניקן 0%</p>
-                                <p> לא מוגז : תפוזים (פריגת) , לימונענע (פריגת) , חמוציות , עגבניות. לא סחוט , מגיע בכוס</p>
+                                <h2>Холодный напитки</h2>
+                                <p>Coca-Cola, Coca-Cola Zero, 7up, 7up zero, Miranda, содовая, Tonic, Heineken 0%</p>
+                                <p>Без газа: Апельсиновый (пригат),клюквенный,лимонад (пригат),Томатный,Минеральная вода. </p>
+                                <p>Все соки не выжатые и подаются в стакане.</p>
                               </div>
                               <div class="price order-2">
                                 <strong><%= price.kala %>₪</strong>
@@ -335,8 +325,8 @@
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
-                                <h3>שתייה חמה</h3>
-                                <p> אספרסו / תה נענע , לימון</p>
+                                <h2>Горячие напитки</h2>
+                                <p>Эспрессо ,Чай (мята,лимон)</p>
                               </div>
                               <div class="price order-2">
                                 <strong><%= price.hama %>₪</strong>
@@ -345,8 +335,8 @@
                             
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
-                                <h3>אייריש קפה</h3>
-                                <p> אספרסו עם תמצית אייריש</p>
+                                <h2>Айриш кофе</h2>
+                                <p>Эспрессо с ирландским Ликёром</p>
                               </div>
                               <div class="price order-2">
                                 <strong><%= price.irish_coffee %>₪</strong>
@@ -355,7 +345,7 @@
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
-                                <h3>פאי קרם אגוזים / עוגת שוקולד נוטלה</h3>
+                                <h2>Ореховый пай / нутелла торт</h2>
                               </div>
                               <div class="price order-2">
                                 <strong><%= price.nutella %>₪</strong>
@@ -364,7 +354,7 @@
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
-                                <h3>גלידה ״בן & גרי״</h3>
+                                <h2>Мороженое Ben & Jerry's</h2>
                               </div>
                               <div class="price order-2">
                                 <strong><%= price.glida %>₪</strong>
