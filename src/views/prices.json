@@ -28,5 +28,11 @@
     "nutella":"35",
     "glida":"15",
     "beer":"28/30",
-    "jameson":"12"
+    "jameson":"12",
+    "takila_based":"45",
+    "rum_based":"45",
+    "shament_based":"45",
+    "whiskey_based":"55",
+    "gin_based":"45",
+    "vodka_based":"45"
 }

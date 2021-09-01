@@ -52,6 +52,9 @@
                       <li class="nav-item">
                         <a class="nav-link" id="pills-others-tab" data-toggle="pill" href="#others" role="tab" aria-controls="pills-others" aria-selected="false">אחר</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">קוקטיילים</a>
+                      </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: center;color: white;">
@@ -66,7 +69,7 @@
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
-                            <h2>צ׳פס גמברינוס</h2>
+                            <h2>צ׳יפס גמברינוס</h2>
                             <p>קוביות תפוח אדמה עם גבינה בולגרית מעל</p>
                             <p>אופציות: גבינה מעל,גבינה בצד,גבינה רק על חצי</p>
                           </div>
@@ -379,8 +382,96 @@
                                 <strong><%= price.glida %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
-
                             </div>
+                            <div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab"style="text-align: center;color: white;">
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס טקילה</h2>
+                                  <h3> ״מרגריטה בטעמים״</h3>
+                                  <p>לימון/תות/פטל</p>
+                                  <h3>״טקילה סאן ראיס״</h3>
+                                  <p>טקילה,תפוז</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= price.takila_based %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס וודקה</h2>
+                                  <h3> ״רפסודיה״</h3>
+                                  <p>וודקה,שנאפס אפרסק,פטל,תפוז,לימון</p>
+                                  <h3>״לונג-איילנד״</h3>
+                                  <p>וודקה,רום,ג׳ין,טקילה,קולה</p>
+                                  <h3>״קוברה״</h3>
+                                  <p>וודקה,רום,ג׳ין,טקילה,תפוז</p>
+                                  <h3>״וונדר-לאנד״</h3>
+                                  <p>וודקה,מי סודה,ליים</p>
+                                  <h3>״אפל-טיני״</h3>
+                                  <p>וודקה,שנאפס תפוח,לימון,תפוח</p>
+                                  <h3>״בלאק-ראשן״</h3>
+                                  <p>וודקה,ליקר קפה</p>
+                                  <h3>״קוסמופוליטן״</h3>
+                                  <p>וודקה,חמוציות,שנאפס אפרסק</p>
+                                  <h3>״בלאק מרי״</h3>
+                                  <p>וודקה, מיץ עגבניות,לימון</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= price.vodka_based %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס ג׳ין</h2>
+                                  <h3> ״סאן פרנסיסקו״</h3>
+                                  <p>ג׳ין,ליקר בננה,תפוז</p>
+                                  <h3>״קמפרי״</h3>
+                                  <p>תפוזים/סודה</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= price.gin_based %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס רום</h2>
+                                  <h3> ״מוחיטו״</h3>
+                                  <p>רום,נענע,לימון</p>
+                                  <h3>״דאיקירי״</h3>
+                                  <p>רום,לימון+ תות/פטל</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= price.rum_based %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס שמנת מתוקה</h2>
+                                  <h3> ״אורגזמה״</h3>
+                                  <p>בייליס,ליקר קפה,שמנת מתוקה,חלב</p>
+                                  <h3>״פרפקט ליידי״</h3>
+                                  <p>בייליס,ליקר קפה,שמנת מתוקה,סאוטארן קומפורט</p>
+                                  <h3>״וויט ראשן״</h3>
+                                  <p>וודקה,ליקר קפה,שמנת מתוקה</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= price.shament_based %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס וויסקי</h2>
+                                  <h3> הסנדק״</h3>
+                                  <p>ויסקי,אמרטו</p>
+                                  <h3>״ראסטי-נייל״</h3>
+                                  <p>ויסקי,דראמבוי</p>
+                                  <h3>״סאואר״</h3>
+                                  <p>ויסקי/רום/טקילה</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= price.whiskey_based %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
                             </div>
                           </div>
                         </div>
