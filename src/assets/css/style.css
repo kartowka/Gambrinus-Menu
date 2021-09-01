@@ -13,9 +13,9 @@ body {
   background-size: cover;
 }
 .icon {
-  background: url('/img/hot.gif');
-  height: 40px;
-  width: 40px;
+  background: url('/img/recommended.png');
+  height: 50px;
+  width: 60px;
   display:block;
   margin: 0 auto;
   /* Other styles here */
