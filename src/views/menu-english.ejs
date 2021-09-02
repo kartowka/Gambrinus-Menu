@@ -51,6 +51,9 @@
                       <li class="nav-item">
                         <a class="nav-link" id="pills-others-tab" data-toggle="pill" href="#others" role="tab" aria-controls="pills-others" aria-selected="false">others</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">cocktails</a>
+                      </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: center;color: white;">
@@ -309,7 +312,16 @@
                                 <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.3')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.5')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
-
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Wine</h2>
+                                <p> White wine - Gewurztraminer VillaWolf </p>
+                                <p> Red wine - Cabernet Sauvignon and Merlot RECANATI Yasmin Red </p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
                                 <h2>Cold Drinks</h2>
@@ -358,7 +370,96 @@
                                 <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
-
+                            </div>
+                            <div class = "tab-pane fade" id = "cocktails" role = "tabpanel" aria-labeledby = "pills-cocktails-tab" style = "text-align: center; color: white;">
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Tequila-based </h2>
+                                  <h3> "Flavored Margarita" </h3>
+                                  <p> Lemon / Strawberry / Raspberry </p>
+                                  <h3> "Tequila Sun Rais" </h3>
+                                  <p> Tequila, Orange </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('takila_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Vodka-based </h2>
+                                  <h3> "Rhapsody" </h3>
+                                  <p> Vodka, peach schnapps, raspberry, orange, lemon </p>
+                                  <h3> "Long Island" </h3>
+                                  <p> Vodka, rum, gin, tequila, cola </p>
+                                  <h3> "Cobra" </h3>
+                                  <p> Vodka, rum, gin, tequila, orange </p>
+                                  <h3> "Wonderland" </h3>
+                                  <p> Vodka, soda water, lime </p>
+                                  <h3> "Apple-Tiny" </h3>
+                                  <p> Vodka, apple schnapps, lemon, apple </p>
+                                  <h3> "Black Russian" </h3>
+                                  <p> Vodka, coffee liqueur </p>
+                                  <h3> "Cosmopolitan" </h3>
+                                  <p> Vodka, cranberries, peach schnapps </p>
+                                  <h3> "Black Mary" </h3>
+                                  <p> Vodka, tomato juice, lemon </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('vodka_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Gin-based </h2>
+                                  "San Francisco" </h3>
+                                  <p> gin, banana liqueur, orange </p>
+                                  <h3> "Campari" </h3>
+                                  <p> Oranges / Soda </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Rum based </h2>
+                                  <h3> "Mojito" </h3>
+                                  <p> Rum, mint, lemon </p>
+                                  <h3> "Daikiri" </h3>
+                                  <p> rum, lemon + strawberry / raspberry </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('rum_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> based on Heavy Cream </h2>
+                                  <h3> "Orgasm" </h3>
+                                  Baileys, coffee liqueur, sweet cream, milk </p>
+                                  <h3> "Perfect Lady" </h3>
+                                  Baileys, coffee liqueur, sweet cream, Southern Comfort </p>
+                                  <h3> "White Russian" </h3>
+                                  <p> Vodka, coffee liqueur, sweet cream </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('shament_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Whiskey based </h2>
+                                  <h3> The Godfather "</h3>
+                                  <p> Whiskey, Amaretto </p>
+                                  <h3> "Rusty-Nail" </h3>
+                                  <p> Whiskey, Drumboy </p>
+                                  <h3> "Sauer" </h3>
+                                  <p> Whiskey / Rum / Tequila </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('whiskey_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
                             </div>
                           </div>
                         </div>
@@ -371,22 +472,13 @@
             <%- include('partials/footer'); %>
 
       
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-
-    <script src="js/aos.js"></script>
-    
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-
-    <script src="js/main.js"></script>
+            <script src="js/jquery-3.2.1.min.js"></script>
+            <script src="js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/aos.js"></script>
+            <script src="js/main.js"></script>
+            
   </body>
 </html>
