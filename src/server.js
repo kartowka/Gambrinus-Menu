@@ -1,15 +1,30 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const path = require('path')
 const routes = require('./routes/route')
 const app = express()
+const methodOverride = require('method-override')
 
 //.env
 require('dotenv').config({
 	path: path.join(__dirname, './.env'),
 })
-
 const appPort = process.env.PORT
 
+
+//connect to mongodb
+mongoose
+	.connect(process.env.dbURI, 
+		{
+		useNewUrlParser: true,
+		useUnifiedTopology: true
+	})
+	.then((result) => app.listen(3000), console.log('mongoDB connected.'))
+	.catch((err) => console.log(err))
+
+
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 //Setting up Handlebars
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
