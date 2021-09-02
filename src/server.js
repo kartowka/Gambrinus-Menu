@@ -11,17 +11,14 @@ require('dotenv').config({
 })
 const appPort = process.env.PORT
 
-
 //connect to mongodb
 mongoose
-	.connect(process.env.dbURI, 
-		{
+	.connect(process.env.dbURI, {
 		useNewUrlParser: true,
-		useUnifiedTopology: true
+		useUnifiedTopology: true,
 	})
 	.then((result) => app.listen(3000), console.log('mongoDB connected.'))
 	.catch((err) => console.log(err))
-
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
@@ -35,6 +32,10 @@ app.use('/fonts', express.static(__dirname + '/assets/fonts'))
 app.use('/js', express.static(__dirname + '/assets/js'))
 app.use('/img', express.static(__dirname + '/assets/img'))
 app.use('/css', express.static(__dirname + '/assets/css'))
+app.use(
+	'/scripts',
+	express.static(path.join(__dirname, '..', 'node_modules/accessibility/'))
+)
 
 app.use('/', routes)
 
