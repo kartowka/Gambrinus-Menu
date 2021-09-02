@@ -60,7 +60,7 @@
                             <p">огурец, помидор, листья салата, лук и болгарский сыр</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.salad_gambrinus %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -70,7 +70,7 @@
                             <p>Варианты: сыр сверху, сыр на стороне, сыр только на половину </p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.chips_gambrinus %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('chips_gambrinus')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -79,7 +79,7 @@
                             <p></p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mukram %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mukram')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -88,7 +88,7 @@
                             <p></p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.pitriyot %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('pitriyot')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -96,7 +96,7 @@
                             <h2>Тост гамбринус/Тост с добавками</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.toast %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('toast')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -108,7 +108,7 @@
                             <h2>Микс креветки и кальмары</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mix %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mix')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
     
@@ -117,7 +117,7 @@
                             <h2>Креветки варёныe 500 г</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mevushal %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mevushal')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -127,7 +127,7 @@
                             <h2>Креветки в чесночном соусе</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mahvat %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mahvat')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -136,7 +136,7 @@
                             <h2>Креветки кальмары на вертеле ״острый״</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.shipudim %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shipudim')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -145,7 +145,7 @@
                             <h2>Креветки в сухарях жареные во фритюре</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.metugan %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('metugan')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -154,7 +154,7 @@
                             <h2>Кальмары в сухарях жареные во фритюре</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.kalamari %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kalamari')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -163,7 +163,7 @@
                             <h2>Крабы морские варёныe 1 кг</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.krab %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('krab')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -173,7 +173,7 @@
                             <p> </p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.raki %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('raki')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
     
@@ -185,7 +185,7 @@
                             <h2>Дэнис во фритюре</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.denis %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -193,7 +193,7 @@
                             <h2>Дэнис в печи</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.denis %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -202,7 +202,7 @@
                             <h2>Жареные морские рыбки 500 г</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.bananot %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('bananot')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -211,7 +211,7 @@
                             <h2>Форель копчёный в печи 500 г</h2>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.forel %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('forel')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         </div>
@@ -222,7 +222,7 @@
                               <h2>Телятина вырезка 500 г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.netah %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('netah')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
                           <div class="d-block d-md-flex menu-food-item">
@@ -230,7 +230,7 @@
                               <h2>Телятина Антрекот 350/650г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.boded %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
   
@@ -239,7 +239,7 @@
                               <h2>Антрекот в печи 350/650г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.boded %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
   
@@ -248,7 +248,7 @@
                               <h2>Рёбрышки свиные сперибс 900 г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.spareribs %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('spareribs')].price%>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -257,7 +257,7 @@
                               <h2>Свиная шейная часть 700 г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.lavan %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('lavan')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -266,7 +266,7 @@
                               <h2>Филе свиной в печи 450/950г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.file %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('file_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('file_kaful')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
                           
@@ -275,7 +275,7 @@
                               <h2>Рёбрышки бараний 500 г</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.keves %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('keves')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -284,7 +284,7 @@
                               <h2>Колбаски из баранины "На гриле"</h2>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.naknikiyot %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('naknikiyot')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -298,7 +298,7 @@
                                 <h2>Чейсер JAMESON</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.jameson %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('jameson')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -307,7 +307,7 @@
                                 <h2>Пиво 0.3/0.5</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.beer %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.3')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.5')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -319,7 +319,7 @@
                                 <p>Все соки не выжатые и подаются в стакане.</p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.kala %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kala')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -329,7 +329,7 @@
                                 <p>Эспрессо ,Чай (мята,лимон)</p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.hama %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('hama')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
                             
@@ -339,7 +339,7 @@
                                 <p>Эспрессо с ирландским Ликёром</p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.irish_coffee %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -348,7 +348,7 @@
                                 <h2>Ореховый пай / нутелла торт</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.nutella %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -357,7 +357,7 @@
                                 <h2>Мороженое Ben & Jerry's</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.glida %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 

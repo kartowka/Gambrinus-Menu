@@ -13,20 +13,16 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
 
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-
-
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
+
+
   <body>
     <div class="site-wrap">
       <div class="main-wrap">
@@ -64,7 +60,8 @@
                             <p">מלפפון,עגבניה,חסה,בצל וגבינה בולגרית מעל</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.salad_gambrinus %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].price %>₪</strong>
+                            
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -74,7 +71,7 @@
                             <p>אופציות: גבינה מעל,גבינה בצד,גבינה רק על חצי</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.chips_gambrinus %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('chips_gambrinus')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -83,7 +80,7 @@
                             <p>תפוח אדמה אפוי פרוס עם רוטב שמנת פטריות מוקרם</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mukram %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mukram')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -92,7 +89,7 @@
                             <p>פטריות טריות שמפניון ברוטב שמנת עם גבינה</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.pitriyot %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('pitriyot')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -103,7 +100,7 @@
                             <p>עד 3 תוספות לבחירה *</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.toast %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('toast')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -116,7 +113,7 @@
                             <p>מוגש מטוגן בשמן עמוק עם רוטב בית בצד</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mix %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mix')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
     
@@ -126,7 +123,7 @@
                             <p>מבושל במים , שלמים לא מקולפים, מוגש עם רוטב בית</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mevushal %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mevushal')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -136,7 +133,7 @@
                             <p>מוגש עם לחם</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.mahvat %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mahvat')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -146,7 +143,7 @@
                             <p>שתי שיפודים לבחירה , אופציות חריף,לא חריף</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.shipudim %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shipudim')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -156,7 +153,7 @@
                             <p> שרימפס מצופה בפירורי לחם מטוגן בשמן עמוק</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.metugan %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('metugan')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -166,7 +163,7 @@
                             <p> קלמרי חצוי מצופה בפירורי לחם ומטוגן בשמן עמוק</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.kalamari %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kalamari')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -176,7 +173,7 @@
                             <p> סרטנים שלמים חצויים לא מקולפים </p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.krab %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('krab')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -186,7 +183,7 @@
                             <p> </p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.raki %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('raki')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                       </div>
@@ -198,7 +195,7 @@
                             <p> מוגש עם סלט, צ׳יפס קוביות וחמאה</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.denis %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         <div class="d-block d-md-flex menu-food-item">
@@ -207,7 +204,7 @@
                             <p> מוגש עם סלט, תפו״א וחמאה</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.denis %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -217,7 +214,7 @@
                             <p> מוגש עם סלט, צ׳יפס קוביות וחמאה</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.bananot %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('bananot')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
 
@@ -227,7 +224,7 @@
                             <p> מוגש עם סלט, תפו״א</p>
                           </div>
                           <div class="price order-2">
-                            <strong><%= price.forel %>₪</strong>
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('forel')].price %>₪</strong>
                           </div>
                         </div> <!-- .menu-food-item -->
                         </div>
@@ -239,7 +236,7 @@
                               <p> מוגש עם סלט, תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.netah %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('netah')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
                           <div class="d-block d-md-flex menu-food-item">
@@ -248,7 +245,7 @@
                               <p> מוגש עם סלט, תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.boded %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
   
@@ -258,7 +255,7 @@
                               <p> אנטריקוט ברוטב מעל בצל ושמיר , מוגש עם סלט,תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.boded %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
   
@@ -268,7 +265,7 @@
                               <p> מוגש עם סלט, תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.spareribs %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('spareribs')].price%>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -278,7 +275,7 @@
                               <p> מוגש עם סלט, תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.lavan %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('lavan')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -288,7 +285,7 @@
                               <p>פילה ברוטב מעל בצל ושמיר , מוגש עם סלט,תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.file %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('file_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('file_kaful')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
                           
@@ -298,7 +295,7 @@
                               <p> מוגש עם סלט, תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.file %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('keves')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -308,7 +305,7 @@
                               <p>שתי נקניקיות לא חריפות, מוגש עם סלט , תפו״א וחמאה</p>
                             </div>
                             <div class="price order-2">
-                              <strong><%= price.naknikiyot %>₪</strong>
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('naknikiyot')].price %>₪</strong>
                             </div>
                           </div> <!-- .menu-food-item -->
 
@@ -322,7 +319,7 @@
                                 <h2>צייסר בית - ג׳ימסון</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.jameson %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('jameson')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
                             <div class="d-block d-md-flex menu-food-item">
@@ -330,7 +327,7 @@
                                 <h2>בירה 0.3/0.5</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.beer %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.3')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.5')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -341,7 +338,7 @@
                                 <p> לא מוגז : תפוזים (פריגת) , לימונענע (פריגת) , חמוציות , עגבניות. לא סחוט , מוגש בכוס</p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.kala %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kala')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -351,7 +348,7 @@
                                 <p> אספרסו / תה נענע , לימון</p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.hama %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('hama')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
                             
@@ -361,7 +358,7 @@
                                 <p> אספרסו עם תמצית אייריש</p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.irish_coffee %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -370,7 +367,7 @@
                                 <h2>פאי קרם אגוזים / עוגת שוקולד נוטלה</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.nutella %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
@@ -379,7 +376,7 @@
                                 <h2>גלידה ״בן & גרי״</h2>
                               </div>
                               <div class="price order-2">
-                                <strong><%= price.glida %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
                             </div>
@@ -393,7 +390,7 @@
                                   <p>טקילה,תפוז</p>
                                 </div>
                                 <div class="price order-2">
-                                  <strong><%= price.takila_based %>₪</strong>
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('takila_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
                               <div class="d-block d-md-flex menu-food-item">
@@ -417,7 +414,7 @@
                                   <p>וודקה, מיץ עגבניות,לימון</p>
                                 </div>
                                 <div class="price order-2">
-                                  <strong><%= price.vodka_based %>₪</strong>
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('vodka_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
                               <div class="d-block d-md-flex menu-food-item">
@@ -429,7 +426,7 @@
                                   <p>תפוזים/סודה</p>
                                 </div>
                                 <div class="price order-2">
-                                  <strong><%= price.gin_based %>₪</strong>
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('gin_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
                               <div class="d-block d-md-flex menu-food-item">
@@ -441,7 +438,7 @@
                                   <p>רום,לימון+ תות/פטל</p>
                                 </div>
                                 <div class="price order-2">
-                                  <strong><%= price.rum_based %>₪</strong>
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('rum_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
                               <div class="d-block d-md-flex menu-food-item">
@@ -455,7 +452,7 @@
                                   <p>וודקה,ליקר קפה,שמנת מתוקה</p>
                                 </div>
                                 <div class="price order-2">
-                                  <strong><%= price.shament_based %>₪</strong>
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shament_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
                               <div class="d-block d-md-flex menu-food-item">
@@ -469,7 +466,7 @@
                                   <p>ויסקי/רום/טקילה</p>
                                 </div>
                                 <div class="price order-2">
-                                  <strong><%= price.whiskey_based %>₪</strong>
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('whiskey_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
                             </div>
@@ -482,26 +479,14 @@
               </div>
               <%- include('partials/footer'); %>
 
-
-
-
-      
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-
     <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
     
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-
-    <script src="js/main.js"></script>
   </body>
 </html>
