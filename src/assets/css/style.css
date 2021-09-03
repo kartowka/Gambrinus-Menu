@@ -3,14 +3,16 @@ html {
 }
 
 body {
-  background-image: url("/img/slider-1-1.jpg");
+  /*background-image: url("/img/slider-1-1.jpg");*/
+  background-image: url("/img/bg_pc.jpg");
   font-family: "Open Sans", cursive;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
-  color: #fff;
+  color:#fff;
+  text-align: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 3144px 3014px;
 }
 .icon {
   background: url('/img/recommended.png');
@@ -334,7 +336,9 @@ textarea.form-control {
 
 @media (max-width: 767px) {
   body{
-    background-image: url("/img/mobile.jpg");
+    background-image: url("/img/bg_mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 600px 3005px;
   }
   .media > a {
     width: 100%;
@@ -371,7 +375,7 @@ textarea.form-control {
 
 .site-tab-nav li a {
   background: none;
-  color: #b3b3b3;
+  color: #fff;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: .2em;
