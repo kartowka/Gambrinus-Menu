@@ -49,14 +49,17 @@
                         <a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">meat</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="pills-others-tab" data-toggle="pill" href="#others" role="tab" aria-controls="pills-others" aria-selected="false">others</a>
+                        <a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">beverage</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">cocktails</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">desserts</a>
+                      </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: center;color: white;">
+                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
                             <h2>Gambrinus Salad</h2>
@@ -104,7 +107,7 @@
                         </div> <!-- .menu-food-item -->
 
                       </div>
-                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" style="text-align: center;color: white;">
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
@@ -180,7 +183,7 @@
                         </div> <!-- .menu-food-item -->
     
                       </div>
-                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab"style="text-align: center;color: white;">
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
@@ -217,7 +220,7 @@
                           </div>
                         </div> <!-- .menu-food-item -->
                         </div>
-                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab"style="text-align: center;color: white;">
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
                         
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
@@ -292,7 +295,7 @@
 
                           </div>
 
-                          <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="pills-others-tab"style="text-align: center;color: white;">
+                          <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
                             
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
@@ -319,7 +322,7 @@
                                 <p> Red wine - Cabernet Sauvignon and Merlot RECANATI Yasmin Red </p>
                               </div>
                               <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('wine_bottle')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
                             <div class="d-block d-md-flex menu-food-item">
@@ -352,26 +355,8 @@
                                 <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>Walnut cream pie / Nutella sponge cake</h2>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>Ben and Jerry's ice cream</h2>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
                             </div>
-                            <div class = "tab-pane fade" id = "cocktails" role = "tabpanel" aria-labeledby = "pills-cocktails-tab" style = "text-align: center; color: white;">
+                            <div class = "tab-pane fade" id = "cocktails" role = "tabpanel" aria-labeledby = "pills-cocktails-tab">
                               <div class = "d-block d-md-flex menu-food-item">
                                 <div class = "text order-1 mb-3">
                                   <h2> Tequila-based </h2>
@@ -395,13 +380,13 @@
                                   <p> Vodka, rum, gin, tequila, orange </p>
                                   <h3> "Wonderland" </h3>
                                   <p> Vodka, soda water, lime </p>
-                                  <h3> "Apple-Tiny" </h3>
+                                  <h3> "Apple-Tini" </h3>
                                   <p> Vodka, apple schnapps, lemon, apple </p>
                                   <h3> "Black Russian" </h3>
                                   <p> Vodka, coffee liqueur </p>
                                   <h3> "Cosmopolitan" </h3>
                                   <p> Vodka, cranberries, peach schnapps </p>
-                                  <h3> "Black Mary" </h3>
+                                  <h3> "Bloody Mary" </h3>
                                   <p> Vodka, tomato juice, lemon </p>
                                 </div>
                                 <div class = "price order-2">
@@ -411,10 +396,18 @@
                               <div class = "d-block d-md-flex menu-food-item">
                                 <div class = "text order-1 mb-3">
                                   <h2> Gin-based </h2>
-                                  "San Francisco" </h3>
+                                  <h3>"San Francisco" </h3>
                                   <p> gin, banana liqueur, orange </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2>Campari based</h2>
                                   <h3> "Campari" </h3>
-                                  <p> Oranges / Soda </p>
+                                  <p> Orange juice / Soda </p>
                                 </div>
                                 <div class = "price order-2">
                                   <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
@@ -436,9 +429,9 @@
                                 <div class = "text order-1 mb-3">
                                   <h2> based on Heavy Cream </h2>
                                   <h3> "Orgasm" </h3>
-                                  Baileys, coffee liqueur, sweet cream, milk </p>
+                                  <p>Baileys, coffee liqueur, sweet cream, milk </p>
                                   <h3> "Perfect Lady" </h3>
-                                  Baileys, coffee liqueur, sweet cream, Southern Comfort </p>
+                                  <p>Baileys, coffee liqueur, sweet cream, Southern Comfort </p>
                                   <h3> "White Russian" </h3>
                                   <p> Vodka, coffee liqueur, sweet cream </p>
                                 </div>
@@ -453,7 +446,7 @@
                                   <p> Whiskey, Amaretto </p>
                                   <h3> "Rusty-Nail" </h3>
                                   <p> Whiskey, Drumboy </p>
-                                  <h3> "Sauer" </h3>
+                                  <h3> "sour" </h3>
                                   <p> Whiskey / Rum / Tequila </p>
                                 </div>
                                 <div class = "price order-2">
@@ -461,7 +454,30 @@
                                 </div>
                               </div> <!-- .menu-food-item -->
                             </div>
-                          </div>
+                            <div class = "tab-pane fade" id = "desserts" role = "tabpanel" aria-labeledby = "pills-desserts-tab">
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>Walnut cream pie / Nutella sponge cake</h2>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+  
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>Ben and Jerry's ice cream</h2>
+                                  <p> Chocolate Brownies - Chocolate ice cream with pieces of brownies </p>
+                                   <p> Cookie Dough - Vanilla ice cream with chocolate chip cookie dough </p>
+                                   <p> Cookie Cream - Fine Cream Ice Cream with Cookies Filled with Vanilla Cream </p>
+                                   <p> Chunky Manky® - Fine Cream Ice Cream with Bananas, Fudge Pieces and Walnuts </p>
+                                   <p> Dolce de Leche - Fine cream ice cream with milk jam and fudge </p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              </div>
                         </div>
                       </div>
                     </div>

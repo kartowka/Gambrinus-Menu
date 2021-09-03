@@ -46,14 +46,17 @@
                         <a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">בשרים</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="pills-others-tab" data-toggle="pill" href="#others" role="tab" aria-controls="pills-others" aria-selected="false">אחר</a>
+                        <a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">משקאות</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">קוקטיילים</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">קינוחים</a>
+                      </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab"style="text-align: center;color: white;">
+                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
                             <h2>סלט גמברינוס</h2>
@@ -105,7 +108,7 @@
                         </div> <!-- .menu-food-item -->
 
                       </div>
-                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" style="text-align: center;color: white;">
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
@@ -187,7 +190,7 @@
                           </div>
                         </div> <!-- .menu-food-item -->
                       </div>
-                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab"style="text-align: center;color: white;">
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
                         
                         <div class="d-block d-md-flex menu-food-item">
                           <div class="text order-1 mb-3">
@@ -228,7 +231,7 @@
                           </div>
                         </div> <!-- .menu-food-item -->
                         </div>
-                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab"style="text-align: center;color: white;">
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
                         
                           <div class="d-block d-md-flex menu-food-item">
                             <div class="text order-1 mb-3">
@@ -311,12 +314,12 @@
 
                           </div>
 
-                          <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="pills-others-tab"style="text-align: center;color: white;">
+                          <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
                                 <i class="icon" aria-hidden="true"></i>                          
-                                <h2>צייסר בית - ג׳ימסון</h2>
+                                <h2>צייסר הבית - ג׳ימסון</h2>
                               </div>
                               <div class="price order-2">
                                 <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('jameson')].price %>₪</strong>
@@ -338,14 +341,14 @@
 
                               </div>
                               <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>₪</strong>
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('wine_bottle')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
 
                             <div class="d-block d-md-flex menu-food-item">
                               <div class="text order-1 mb-3">
                                 <h2>שתייה קלה</h2>
-                                <p>קוקה קולה,קוקה קולה זירו,7 אפ,7 אפ זירו,מירנדה,סודה,מי טוניק,הייניקן 0%</p>
+                                <p>קוקה קולה,קוקה קולה זירו,ספרייט,ספרייט זירו,מירנדה,סודה,מי טוניק,   הייניקן 0%</p>
                                 <p> לא מוגז : תפוזים (פריגת) , לימונענע (פריגת) , חמוציות , עגבניות. לא סחוט , מוגש בכוס</p>
                               </div>
                               <div class="price order-2">
@@ -372,26 +375,8 @@
                                 <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
                               </div>
                             </div> <!-- .menu-food-item -->
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>פאי קרם אגוזים / עוגת שוקולד נוטלה</h2>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>גלידה ״בן & גרי״</h2>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
                             </div>
-                            <div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab"style="text-align: center;color: white;">
+                            <div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab">
                               <div class="d-block d-md-flex menu-food-item">
                                 <div class="text order-1 mb-3">
                                   <h2>על בסיס טקילה</h2>
@@ -421,7 +406,7 @@
                                   <p>וודקה,ליקר קפה</p>
                                   <h3>״קוסמופוליטן״</h3>
                                   <p>וודקה,חמוציות,שנאפס אפרסק</p>
-                                  <h3>״בלאק מרי״</h3>
+                                  <h3>״בלודי מרי״</h3>
                                   <p>וודקה, מיץ עגבניות,לימון</p>
                                 </div>
                                 <div class="price order-2">
@@ -433,13 +418,21 @@
                                   <h2>על בסיס ג׳ין</h2>
                                   <h3> ״סאן פרנסיסקו״</h3>
                                   <p>ג׳ין,ליקר בננה,תפוז</p>
-                                  <h3>״קמפרי״</h3>
-                                  <p>תפוזים/סודה</p>
                                 </div>
                                 <div class="price order-2">
                                   <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('gin_based')].price %>₪</strong>
                                 </div>
                               </div> <!-- .menu-food-item -->
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>על בסיס קמפרי</h2>
+                                  <h3>״קמפרי״</h3>
+                                  <p>מיץ תפוזים/סודה</p>
+                                  </div>
+                                  <div class="price order-2">
+                                    <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('gin_based')].price %>₪</strong>
+                                  </div>
+                                </div> <!-- .menu-food-item -->
                               <div class="d-block d-md-flex menu-food-item">
                                 <div class="text order-1 mb-3">
                                   <h2>על בסיס רום</h2>
@@ -481,6 +474,30 @@
                                 </div>
                               </div> <!-- .menu-food-item -->
                             </div>
+                            <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>פאי קרם אגוזים / עוגת שוקולד נוטלה</h2>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+  
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>גלידה ״בן & גריס״</h2>
+                                  <p>שוקולד בראוניס - גלידת שוקולד עם חתיכות בראוניס</p>
+                                  <p>בצק עוגיות - גלידת וניל עם בצק עוגיות שוקולד צ'יפס</p>
+                                  <p>קרם עוגיות - גלידת שמנת משובחת עם עוגיות במילוי קרם וניל</p>
+                                  <p>צ'אנקי מנקי® - גלידת שמנת משובחת עם בננות , חתיכות פאדג' ואגוזי מלך</p>
+                                  <p>דולצ'ה דה לצ'ה - גלידת שמנת משובחת עם ריבת חלב ופאדג'</p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              </div>
                           </div>
                         </div>
                       </div>
