@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gambrinus MENU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="site-wrap">
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+            <div class="section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" data-aos="fade-up">
+                    <div class="card-body">
+                        <div class="d-block d-md-flex menu-food-item" id="dataTable" role="grid" aria-describedby="dataTable_info"">
+                        <form method="POST">
+                          <table class="table my-0" id="dataTable">
+                            <thead>
+                              <tr>
+                                <th>Product</th>
+                                <th>Current Price</th>
+                                <th>New Price</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <% if(pr.length!=0){for(i=0;i<pr.length;i++){ %>
+                                <tr>
+                                  <td>
+                                    <%=pr[i].product %>
+                                  </td>
+
+                                  <td>
+                                    <%=pr[i].price %>
+                                  </td>
+                                  <td><input size="5" type="text" placeholder=<%=pr[i].price%> id=new_price name="new_price" value = <%=pr[i].price%>></td>
+                                  <td>
+                                    <!-- <form method="POST"> -->
+                                      <button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=pr[i].id%>,<%=i%>" name="product_id">Save</button>
+                                      <!-- <form action="/admin_interface/<%= pr[i].id %>" method="POST">
+                                    <input type="submit" value="Edit">
+                                  </form> -->
+                                  </td>
+                                </tr>
+                                <% } %>
+                                  <% } else{ %>
+                                    <tr>
+                                      <td colspan="7">No Data Found</td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    <%- include('partials/footer'); %>
+
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                  
+                    <script src="js/jquery-3.2.1.min.js"></script>
+                    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+                    <script src="js/popper.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/owl.carousel.min.js"></script>
+                    <script src="js/aos.js"></script>
+                    <script src="js/main.js"></script>
+
+                    
+          </body>
+        </html>
