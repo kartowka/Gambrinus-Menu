@@ -4,7 +4,14 @@ const path = require('path')
 const routes = require('./routes/route')
 const app = express()
 const methodOverride = require('method-override')
+const cookieParser = require('cookie-parser')
+const User = require('./models/admin_user')
+const jwt = require('jsonwebtoken')
 
+app.use(cookieParser())
+app.locals.userLoggedIn = 0
+app.locals.userID = ''
+app.locals.userRole = ''
 //.env
 require('dotenv').config({
 	path: path.join(__dirname, './.env'),
@@ -22,6 +29,36 @@ mongoose
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+
+app.use(async (req, res, next) => {
+	if (req.cookies['x-access-token']) {
+		try {
+			const accessToken = req.cookies['x-access-token']
+			const { userId, exp } = await jwt.verify(
+				accessToken,
+				process.env.JWT_SECRET
+			)
+			// If token has expired
+			if (exp < Date.now().valueOf() / 1000) {
+				return res.status(401).json({
+					error: 'JWT token has expired, please login to obtain a new one',
+				})
+			}
+			res.locals.loggedInUser = await User.findById(userId)
+			if (res.locals.loggedInUser) {
+				res.locals.userLoggedIn = 1
+				res.locals.userRole = res.locals.loggedInUser.role
+				res.locals.userID = userId
+			}
+			next()
+		} catch (error) {
+			next(error)
+		}
+	} else {
+		res.locals.userLoggedIn = 0
+		next()
+	}
+})
 //Setting up Handlebars
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
