@@ -5,14 +5,31 @@ html {
 body {
   /*background-image: url("/img/slider-1-1.jpg");*/
   background-image: url("/img/bg_pc.jpg");
-  font-family: "Open Sans", cursive;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   font-size: 20px;
   line-height: 1.2;
-  font-weight: 500;
   color:#fff;
   text-align: center;
+  /* background-size: 3144px 3014px; */
   background-repeat: no-repeat;
-  background-size: 3144px 3014px;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 3px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
 }
 .icon {
   background: url('/img/recommended.png');
@@ -35,7 +52,8 @@ a:hover {
 
 h1, h2, h3, h4, h5 {
   color:#fff;
-  font-family: "Playfair Display", Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a {
@@ -338,11 +356,21 @@ textarea.form-control {
   body{
     background-image: url("/img/bg_mobile.jpg");
     background-repeat: no-repeat;
-    background-size: 600px 3005px;
-  }
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    }
   .media > a {
     width: 100%;
     margin-bottom: 30px;
+  }
+  table, thead, tbody, th, td, tr { 
+		display: block;
+    text-align: center;
+	}
+  table thead {
+    display: none;
   }
 }
 
@@ -1502,3 +1530,4 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
