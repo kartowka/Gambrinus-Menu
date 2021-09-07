@@ -56,6 +56,7 @@ const Price = mongoose.model('price', PriceSchema)
 // 	{ product: 'whiskey_based', price: '55' },
 // 	{ product: 'gin_based', price: '45' },
 // 	{ product: 'vodka_based', price: '45' },
+//  { product: 'seabass', price: '125' }],ß
 // ]
 
 // // save multiple documents to the collection referenced by Book Model
@@ -66,4 +67,5 @@ const Price = mongoose.model('price', PriceSchema)
 // 		console.log('Multiple documents inserted to Collection')
 // 	}
 // })
+
 module.exports = Price
