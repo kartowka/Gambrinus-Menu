@@ -404,7 +404,7 @@ textarea.form-control {
 .site-tab-nav li a {
   background: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: .2em;
   border-bottom: 2px solid transparent;
@@ -414,7 +414,7 @@ textarea.form-control {
 }
 
 .site-tab-nav li a.active {
-  color: white;
+  color: #fdb44b;
   background: none;
   border-bottom: 2px solid #fdb44b;
 }
