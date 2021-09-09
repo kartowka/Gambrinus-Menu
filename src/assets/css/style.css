@@ -312,6 +312,20 @@ textarea.form-control {
 }
 
 @media (max-width: 991px) {
+  body:after{
+    content:"";
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
+    left:0;
+    right:0;
+    z-index:-1; /* needed to keep in the background */
+    background: url("/img/bg_pc.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
   .half .image {
     height: 250px;
   }
@@ -353,14 +367,29 @@ textarea.form-control {
 }
 
 @media (max-width: 767px) {
-  body{
+  body:after{
+    content:"";
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
+    left:0;
+    right:0;
+    z-index:-1; /* needed to keep in the background */
+    background: url("/img/bg_pc.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+  
+  /* body{
     background-image: url("/img/bg_mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    }
+    } */
   .media > a {
     width: 100%;
     margin-bottom: 30px;
@@ -1121,6 +1150,7 @@ textarea.form-control {
 }
 
 @media (min-width: 768px) {
+  
   .menus .item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
