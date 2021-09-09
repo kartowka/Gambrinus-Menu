@@ -325,6 +325,8 @@ textarea.form-control {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
   .half .image {
     height: 250px;
@@ -380,6 +382,8 @@ textarea.form-control {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
   
   /* body{
