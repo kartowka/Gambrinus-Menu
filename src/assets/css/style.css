@@ -436,14 +436,11 @@ textarea.form-control {
 
 .site-tab-nav li a {
   background: none;
-  color: #fff;
-  font-size: 20px;
+  color:#fff;
+  font-size: 30px;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border-bottom: 2px solid transparent;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 10px;
+  margin: 10px
 }
 
 .site-tab-nav li a.active {
