@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gambrinus MENU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/onts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="site-wrap">
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+            <div class="section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" data-aos="fade-up">
+                    <div class="card-body">
+                      <form method="POST">
+                        <div class="form-group hebrew_text">
+                          <label for="he_name">שם המנה</label>
+                          <input type="text" class="form-control" id="he_name" value="<%=pr.he_name%>" name="he_name" placeholder="<%=pr.he_name%>">
+                        </div>
+                        <div class="he_descriptions">
+                        <% pr.he_description.forEach((element,i) => { %>
+                        <div class="form-group hebrew_text">
+                          <label for="he_name">תיאור</label>
+                          <textarea class="form-control" placeholder="<%=element%>" id='he_description' name="he_description[]"><%=element%></textarea>
+                        </div>
+                        <% }) %>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <a href="javascript:void(0);" id="add_he_description" class="btn btn-primary mb-3">הוספת תיאור נוסף</a>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <a href="javascript:void(0);" id="delete_he_description" class="btn btn-danger mb-3">הוסרת תיאור אחרון</a>
+                        </div>
+                      </div>
+                        <div class="form-group">
+                          <label for="ru_name">Название блюда</label>
+                          <input type="text" class="form-control" id="ru_name" value="<%=pr.ru_name%>" name="ru_name" placeholder="<%=pr.ru_name%>">
+                        </div>
+                        <div class="ru_descriptions">
+                        <% pr.ru_description.forEach((element,i) => { %>
+                        <div class="form-group">
+                          <label for="ru_description">описание</label>
+                          <textarea class="form-control" placeholder="<%=element%>" id=ru_description name="ru_description[]"><%=element%></textarea>
+                        </div>
+                        <% }) %>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="add_ru_description" class="btn btn-primary mb-3">Добавить новое описание</a>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="delete_ru_description" class="btn btn-danger mb-3">Удалить последнее описание</a>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="en_name">Dish name</label>
+                          <input type="text" class="form-control" id="en_name" value="<%=pr.en_name%>" name="en_name" placeholder="<%=pr.en_name%>">
+                        </div>
+                        <div class="en_descriptions">
+                        <% pr.en_description.forEach((element,i) => { %>
+                        <div class="form-group">
+                          <label for="en_description">Description</label>
+                          <textarea class="form-control" placeholder="<%=element%>" id=en_description name="en_description[]"><%=element%></textarea>
+                        </div>
+                        <% }) %>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="add_en_description" class="btn btn-primary mb-3">Add new description</a>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="delete_en_description" class="btn btn-danger mb-3">Delete last description</a>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="price">מחיר</label>
+                          <input type="text" class="form-control" id="price" value="<%=pr.price%>" name="price" placeholder="<%=pr.price%>">
+                        </div>
+                        <!-- <div class="form-group">
+                          <label for="price">תווית</label>
+                          <input type="text" class="form-control" id="tag" value="<%=pr.tag%>" name="tag" placeholder="<%=pr.tag%>">
+                        </div> -->
+                        <div class="form-group">
+                          <label for="tag">תווית</label>
+                          <select name="tag" class="form-control form-control-user"
+                              placeholder="Select tag" id="tag" style="
+                              height: 65px" required>
+                              <option value="" disabled="" selected=""></option>
+                              <option value="starters">starters</option>
+                              <option value="seafood">seafood</option>
+                              <option value="fish">fish</option>
+                              <option value="meat">meat</option>
+                              <option value="beverage">beverage</option>
+                              <option value="cocktails">cocktails</option>
+                              <option value="desserts">desserts</option>
+                          </select>
+                      </div>
+                      <div class="form-group ">
+                        <label for="recommended" class="hebrew_text">האם המוצר מומלץ?</label>
+                        <select name="recommended" class="form-control form-control-user"
+                            placeholder="Select recommended" id="recommended" style="
+                            height: 65px" required>
+                            <option value="" disabled="" selected=""></option>
+                            <option value="true">כן</option>
+                            <option value="false">לא</option>
+                        </select>
+                    </div>
+                        <div class="form-group">
+                        <button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=pr.id%>" name="product_id">Save</button>
+                        </div>
+                      </form>
+                        <a href = "javascript:history.back()">Back to previous page</a>
+                      </div>
+                    <%- include('partials/footer'); %>
+
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                  
+                    <script src="/js/jquery-3.2.1.min.js"></script>
+                    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+                    <script src="/js/popper.min.js"></script>
+                    <script src="/js/bootstrap.min.js"></script>
+                    <script src="/js/owl.carousel.min.js"></script>
+                    <script src="/js/aos.js"></script>
+                    <script src="/js/main.js"></script>
+                    <script src="/js/description_add.js"></script>
+                    
+
+                    
+          </body>
+        </html>
