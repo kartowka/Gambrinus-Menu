@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gambrinus Add Product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/onts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="site-wrap">
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+            <div class="section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" data-aos="fade-up">
+                    <div class="card-body">
+                      <form method="POST">
+                        <div class="form-group hebrew_text">
+                            <label for="product">הכנס קוד מוצר באנגלית</label>
+                            <input type="text" class="form-control" id="product" value="" name="product" placeholder="קוד מוצר" required>
+                          </div>
+                        <div class="form-group hebrew_text">
+                          <label for="he_name">שם המנה</label>
+                          <input type="text" class="form-control" id="he_name" value="" name="he_name" placeholder="הכנס שם חדש">
+                        </div>
+                        <div class="he_descriptions">
+                        <div class="form-group hebrew_text">
+                          <label for="he_name">תיאור</label>
+                          <textarea class="form-control" placeholder="הכנס תיאור חדש" id='he_description' name="he_description[]"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <a href="javascript:void(0);" id="add_he_description" class="btn btn-primary mb-3">הוספת תיאור נוסף</a>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <a href="javascript:void(0);" id="delete_he_description" class="btn btn-danger mb-3">הוסרת תיאור אחרון</a>
+                        </div>
+                      </div>
+                        <div class="form-group">
+                          <label for="ru_name">Название блюда</label>
+                          <input type="text" class="form-control" id="ru_name" value="" name="ru_name" placeholder="новое блюда">
+                        </div>
+                        <div class="ru_descriptions">
+                        <div class="form-group">
+                          <label for="ru_description">описание</label>
+                          <textarea class="form-control" placeholder="новое описание" id=ru_description name="ru_description[]"></textarea>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="add_ru_description" class="btn btn-primary mb-3">Добавить новое описание</a>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="delete_ru_description" class="btn btn-danger mb-3">Удалить последнее описание</a>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="en_name">Dish name</label>
+                          <input type="text" class="form-control" id="en_name" value="" name="en_name" placeholder="Enter new name">
+                        </div>
+                        <div class="en_descriptions">
+                        <div class="form-group">
+                          <label for="en_description">Description</label>
+                          <textarea class="form-control" placeholder="new descriptions" id=en_description name="en_description[]"></textarea>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="add_en_description" class="btn btn-primary mb-3">Add new description</a>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <a href="javascript:void(0);" id="delete_en_description" class="btn btn-danger mb-3">Delete last description</a>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="price">מחיר</label>
+                          <input type="text" class="form-control" id="price" value="" name="price" placeholder="Enter price">
+                        </div>
+                        <div class="form-group">
+                          <label for="tag">תווית</label>
+                          <select name="tag" class="form-control form-control-user hebrew_text"
+                              placeholder="Select tag" id="tag"style="
+                              height: 65px" required>
+                              <option value="" disabled="" selected="">לחץ לבחירה</option>
+                              <option value="starters">מנות פתיחה</option>
+                              <option value="seafood">פירות ים</option>
+                              <option value="fish">דגים</option>
+                              <option value="meat">בשרים</option>
+                              <option value="beverage">משקאות</option>
+                              <option value="cocktails">קוקטיילים</option>
+                              <option value="desserts">קינוחים</option>
+                          </select>
+                      </div>
+                      <div class="form-group ">
+                        <label for="recommended" class="hebrew_text">האם המוצר מומלץ?</label>
+                        <select name="recommended" class="form-control form-control-user hebrew_text"
+                            placeholder="Select recommended" id="recommended" style="
+                            height: 65px" required>
+                            <option value="" disabled="" selected="">לחץ לבחירה</option>
+                            <option value="true">כן</option>
+                            <option value="false">לא</option>
+                        </select>
+                    </div>
+                        <div class="form-group">
+                        <button class="btn btn-primary" type="submit" onclick="" id="add_new_product" value="" name="">Save</button>
+                        </div>
+                      </form>
+                        <a href = "javascript:history.back()">Back to previous page</a>
+                      </div>
+                    <%- include('partials/footer'); %>
+
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                  
+                    <script src="/js/jquery-3.2.1.min.js"></script>
+                    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+                    <script src="/js/popper.min.js"></script>
+                    <script src="/js/bootstrap.min.js"></script>
+                    <script src="/js/owl.carousel.min.js"></script>
+                    <script src="/js/aos.js"></script>
+                    <script src="/js/main.js"></script>
+                    <script src="/js/description_add.js"></script>
+                    
+
+                    
+          </body>
+        </html>
