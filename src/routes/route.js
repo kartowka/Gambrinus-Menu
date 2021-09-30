@@ -40,6 +40,19 @@ router
 		}
 	})
 router
+	.route('/add_product')
+	.get(
+		price_controller.allowIfLoggedin,
+		price_controller.grantAccess('readAny', 'price_settings'),
+		(req, res) => {
+			res.render('add_product')
+		}
+	)
+	.post(async (req, res) => {
+		await price_controller.addProduct(req, res)
+		res.redirect(req.get('referer'))
+	})
+router
 	.route('/admin')
 	.get(
 		price_controller.allowIfLoggedin,
