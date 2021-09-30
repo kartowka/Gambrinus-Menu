@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/aos.css">
 
-    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css">
 
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
     <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
 
 
@@ -57,481 +57,153 @@
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>סלט גמברינוס</h2>
-                            <p">מלפפון,עגבניה,חסה,בצל וגבינה בולגרית מעל</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].price %>₪</strong>
-                            
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>צ׳יפס גמברינוס</h2>
-                            <p>קוביות תפוח אדמה עם גבינה בולגרית מעל</p>
-                            <p>אופציות: גבינה מעל,גבינה בצד,גבינה רק על חצי</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('chips_gambrinus')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>תפוח אדמה ברוטב שמנת פטריות מוקרם</h2>
-                            <p>תפוח אדמה אפוי פרוס עם רוטב שמנת פטריות מוקרם</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mukram')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>פטריות ברוטב שמנת עם גבינה</h2>
-                            <p>פטריות טריות שמפניון ברוטב שמנת עם גבינה</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('pitriyot')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>טוסט גמברינוס/טוסט עם מבחר תוספות</h2>
-                            <p>טוסט גבינה ומעל רוטב שמנת פטריות, טוסט עם תוספות לבחירה  </p>
-                            <p>עגבניה, בצל, בולגרית, פטריות  </p>
-                            <p>עד 3 תוספות לבחירה *</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('toast')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
+                        <% pr.forEach(element => { %>
+                        <% if (element.tag== 'starters') { %>
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3 hebrew_text">
+                                <% if (element.recommended == 'true') { %>
+                                  <i class="icon" aria-hidden="true"></i>
+                                <% } %>
+                                <h2><%=element.he_name%></h2>
+                                <% element.he_description.forEach(description => { %>
+                                 <p><%=description%></p>
+                                <% }) %>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%=element.price%>₪</strong>
+                                </div> <!-- .menu-food-item -->
+                                </div>
+                          <% } %>
+                        <% }) %>
                       </div>
-                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
-                        
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>מיקס שרימפס וקלמרי</a></h2>
-                            <p>מוגש מטוגן בשמן עמוק עם רוטב בית בצד</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mix')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-    
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>שרימפס מבושל 500גר׳ </h2>
-                            <p>מבושל במים , שלמים לא מקולפים, מוגש עם רוטב בית</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mevushal')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <i class="icon" aria-hidden="true"></i>                          
-                            <h2> שרימפס בחמאה ושום  </h2>
-                            <p>מוגש עם לחם</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mahvat')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>שרימפס / קלמרי ״על האש״ פיקנטי </h2>
-                            <p>שתי שיפודים לבחירה , אופציות חריף,לא חריף</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shipudim')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>שרימפס מטוגן </h2>
-                            <p> שרימפס מצופה בפירורי לחם מטוגן בשמן עמוק</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('metugan')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>קלמרי מטוגן </h2>
-                            <p> קלמרי חצוי מצופה בפירורי לחם ומטוגן בשמן עמוק</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kalamari')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>סרטן הים 1ק״ג </h2>
-                            <p> סרטנים שלמים חצויים לא מקולפים </p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('krab')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>סרטן הנהרות 1ק״ג</h2>
-                            <p> </p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('raki')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
+                        <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
+                          <% pr.forEach(element => { %>
+                          <% if (element.tag== 'seafood') { %>
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3 hebrew_text">
+                                <% if (element.recommended == 'true') { %>
+                                  <i class="icon" aria-hidden="true"></i>
+                                <% } %>
+                                <h2><%=element.he_name%></h2>
+                                <% element.he_description.forEach(description => { %>
+                                 <p><%=description%></p>
+                                <% }) %>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%=element.price%>₪</strong>
+                                </div> <!-- .menu-food-item -->
+                                </div>
+                          <% } %>
+                        <% }) %>
                       </div>
                       <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
-                        
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>דניס מטוגן בשמן עמוק</h2>
-                            <p> מוגש עם סלט, צ׳יפס קוביות וחמאה</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>דניס בתנור</h2>
-                            <p> מוגש עם סלט, תפו״א וחמאה</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>לברק בתנור</h2>
-                            <p> מוגש עם סלט, תפו״א וחמאה</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('seabass')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>לברק מטוגן בשמן עמוק</h2>
-                            <p> מוגש עם סלט, צ׳יפס וחמאה</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('seabass')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>דגי ים מטוגנים 500גר׳</h2>
-                            <p> מוגש עם סלט, צ׳יפס קוביות וחמאה</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('bananot')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-
-                        <div class="d-block d-md-flex menu-food-item">
-                          <div class="text order-1 mb-3">
-                            <h2>פורל מעושן בתנור </h2>
-                            <p> מוגש עם סלט, תפו״א</p>
-                          </div>
-                          <div class="price order-2">
-                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('forel')].price %>₪</strong>
-                          </div>
-                        </div> <!-- .menu-food-item -->
-                        </div>
-                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
-                        
+                        <% pr.forEach(element => { %>
+                        <% if (element.tag== 'fish') { %>
                           <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>נתח קצבים עד 500גר׳</h2>
-                              <p> מוגש עם סלט, תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('netah')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>אנטריקוט מיושן 350/650גר׳</h2>
-                              <p> מוגש עם סלט, תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-  
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>אנטריקוט בתנור 350/650גר׳</h2>
-                              <p> אנטריקוט ברוטב מעל בצל ושמיר , מוגש עם סלט,תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-  
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>צלעות לבן – ספריבס 900גר׳  </h2>
-                              <p> מוגש עם סלט, תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('spareribs')].price%>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>סטייק צוואר לבן 700גר׳</h2>
-                              <p> מוגש עם סלט, תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('lavan')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>פילה לבן בתנור 450/950גר׳</h2>
-                              <p>פילה ברוטב מעל בצל ושמיר , מוגש עם סלט,תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('file_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('file_kaful')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-                          
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>צלעות טלה 500גר׳</h2>
-                              <p> מוגש עם סלט, תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('keves')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-
-                          <div class="d-block d-md-flex menu-food-item">
-                            <div class="text order-1 mb-3">
-                              <h2>נקנקיות טלה ״על האש״</h2>
-                              <p>שתי נקניקיות לא חריפות, מוגש עם סלט , תפו״א וחמאה</p>
-                            </div>
-                            <div class="price order-2">
-                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('naknikiyot')].price %>₪</strong>
-                            </div>
-                          </div> <!-- .menu-food-item -->
-
-                          </div>
-
-                          <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <i class="icon" aria-hidden="true"></i>                          
-                                <h2>צייסר הבית - ג׳ימסון</h2>
+                            <div class="text order-1 mb-3 hebrew_text">
+                              <% if (element.recommended == 'true') { %>
+                                <i class="icon" aria-hidden="true"></i>
+                              <% } %>
+                              <h2><%=element.he_name%></h2>
+                              <% element.he_description.forEach(description => { %>
+                               <p><%=description%></p>
+                              <% }) %>
                               </div>
                               <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('jameson')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>בירה 0.3/0.5</h2>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.3')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.5')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>בירה 0%</h2>
-                                <p>הייניקן 0% </p>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>יין</h2>
-                                <p>VillaWolf יין לבן - גוורצטרמינר</p>
-                                <p>RECANATI Yasmin Red יין אדום - קברנה סובניון ומרלו</p>
-
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('wine_bottle')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>שתייה קלה</h2>
-                                <p>קוקה קולה,קוקה קולה זירו,ספרייט,ספרייט זירו,מירנדה,סודה,מי טוניק</p>
-                                <p> לא מוגז : תפוזים (פריגת) , לימונענע (פריגת) , חמוציות , עגבניות. לא סחוט , מוגש בכוס</p>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kala')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>שתייה חמה</h2>
-                                <p> אספרסו / תה נענע , לימון</p>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('hama')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-                            
-                            <div class="d-block d-md-flex menu-food-item">
-                              <div class="text order-1 mb-3">
-                                <h2>אייריש קפה</h2>
-                                <p> אספרסו עם תמצית אייריש</p>
-                              </div>
-                              <div class="price order-2">
-                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
-                              </div>
-                            </div> <!-- .menu-food-item -->
-                            </div>
-                            <div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab">
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס טקילה</h2>
-                                  <h3> ״מרגריטה בטעמים״</h3>
-                                  <p>תות/פטל</p>  <!-- לימון/ -->
-                                  <h3>״טקילה סאן ראיס״</h3>
-                                  <p>טקילה,תפוז</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('takila_based')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס וודקה</h2>
-                                  <h3> ״רפסודיה״</h3>
-                                  <p>וודקה,שנאפס אפרסק,פטל,תפוז,לימון</p>
-                                  <h3>״לונג-איילנד״</h3>
-                                  <p>וודקה,רום,ג׳ין,טקילה,קולה</p>
-                                  <h3>״קוברה״</h3>
-                                  <p>וודקה,רום,ג׳ין,טקילה,תפוז</p>
-                                  <h3>״וונדר-לאנד״</h3>
-                                  <p>וודקה,מי סודה,ליים</p>
-                                  <h3>״אפל-טיני״</h3>
-                                  <p>וודקה,שנאפס תפוח,לימון,תפוח</p>
-                                  <h3>״בלאק-ראשן״</h3>
-                                  <p>וודקה,ליקר קפה</p>
-                                  <h3>״קוסמופוליטן״</h3>
-                                  <p>וודקה,חמוציות,שנאפס אפרסק</p>
-                                  <h3>״בלודי מרי״</h3>
-                                  <p>וודקה, מיץ עגבניות,לימון</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('vodka_based')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס ג׳ין</h2>
-                                  <h3> ״סאן פרנסיסקו״</h3>
-                                  <p>ג׳ין,ליקר בננה,תפוז</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('gin_based')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס קמפרי</h2>
-                                  <h3>״קמפרי״</h3>
-                                  <p>מיץ תפוזים/סודה</p>
-                                  </div>
-                                  <div class="price order-2">
-                                    <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('gin_based')].price %>₪</strong>
-                                  </div>
-                                </div> <!-- .menu-food-item -->
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס רום</h2>
-                                  <h3> ״מוחיטו״</h3>
-                                  <p>רום,נענע,לימון</p>
-                                  <h3>״דאיקירי״</h3>
-                                  <p>רום,לימון+ תות/פטל</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('rum_based')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס שמנת מתוקה</h2>
-                                  <h3> ״אורגזמה״</h3>
-                                  <p>בייליס,ליקר קפה,שמנת מתוקה,חלב</p>
-                                  <h3>״פרפקט ליידי״</h3>
-                                  <p>בייליס,ליקר קפה,שמנת מתוקה,סאוטארן קומפורט</p>
-                                  <h3>״וויט ראשן״</h3>
-                                  <p>וודקה,ליקר קפה,שמנת מתוקה</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shament_based')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>על בסיס וויסקי</h2>
-                                  <h3> ״הסנדק״</h3>
-                                  <p>ויסקי,אמרטו</p>
-                                  <h3>״ראסטי-נייל״</h3>
-                                  <p>ויסקי,דראמבוי</p>
-                                  <h3>״סאואר״</h3>
-                                  <p>ויסקי/רום/טקילה</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('whiskey_based')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-                            </div>
-                            <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>פאי קרם אגוזים / עוגת שוקולד נוטלה</h2>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
-                                </div>
-                              </div> <!-- .menu-food-item -->
-  
-                              <div class="d-block d-md-flex menu-food-item">
-                                <div class="text order-1 mb-3">
-                                  <h2>גלידה ״בן & גריס״</h2>
-                                  <p>שוקולד בראוניס - גלידת שוקולד עם חתיכות בראוניס</p>
-                                  <p>בצק עוגיות - גלידת וניל עם בצק עוגיות שוקולד צ'יפס</p>
-                                  <p>קרם עוגיות - גלידת שמנת משובחת עם עוגיות במילוי קרם וניל</p>
-                                  <p>צ'אנקי מנקי® - גלידת שמנת משובחת עם בננות , חתיכות פאדג' ואגוזי מלך</p>
-                                  <p>דולצ'ה דה לצ'ה - גלידת שמנת משובחת עם ריבת חלב ופאדג'</p>
-                                </div>
-                                <div class="price order-2">
-                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
-                                </div>
+                                <strong><%=element.price%>₪</strong>
                               </div> <!-- .menu-food-item -->
                               </div>
-                          </div>
-                        </div>
-                      </div>
+                        <% } %>
+                      <% }) %>
                     </div>
+                    <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
+                      <% pr.forEach(element => { %>
+                      <% if (element.tag== 'meat') { %>
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3 hebrew_text">
+                            <% if (element.recommended == 'true') { %>
+                              <i class="icon" aria-hidden="true"></i>
+                            <% } %>
+                            <h2><%=element.he_name%></h2>
+                            <% element.he_description.forEach(description => { %>
+                             <p><%=description%></p>
+                            <% }) %>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%=element.price%>₪</strong>
+                            </div> <!-- .menu-food-item -->
+                            </div>
+                      <% } %>
+                    <% }) %>
                   </div>
+                  <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
+                    <% pr.forEach(element => { %>
+                    <% if (element.tag== 'beverage') { %>
+                      <div class="d-block d-md-flex menu-food-item">
+                        <div class="text order-1 mb-3 hebrew_text">
+                          <% if (element.recommended == 'true') { %>
+                            <i class="icon" aria-hidden="true"></i>
+                          <% } %>
+                          <h2><%=element.he_name%></h2>
+                          <% element.he_description.forEach(description => { %>
+                           <p><%=description%></p>
+                          <% }) %>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%=element.price%>₪</strong>
+                          </div> <!-- .menu-food-item -->
+                          </div>
+                    <% } %>
+                  <% }) %>
                 </div>
+                <div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab">
+                <% pr.forEach(element => { %>
+                  <% if (element.tag== 'cocktails') { %>
+                    <div class="d-block d-md-flex menu-food-item">
+                      <div class="text order-1 mb-3 hebrew_text">
+                        <% if (element.recommended == 'true') { %>
+                          <i class="icon" aria-hidden="true"></i>
+                        <% } %>
+                        <h2><%=element.he_name%></h2>
+                        <% element.he_description.forEach(description => { %>
+                         <p><%=description%></p>
+                        <% }) %>
+                        </div>
+                        <div class="price order-2">
+                          <strong><%=element.price%>₪</strong>
+                        </div> <!-- .menu-food-item -->
+                        </div>
+                  <% } %>
+                <% }) %>
               </div>
+              <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
+              <% pr.forEach(element => { %>
+                <% if (element.tag== 'desserts') { %>
+                  <div class="d-block d-md-flex menu-food-item">
+                    <div class="text order-1 mb-3 hebrew_text">
+                      <% if (element.recommended == 'true') { %>
+                        <i class="icon" aria-hidden="true"></i>
+                      <% } %>
+                      <h2><%=element.he_name%></h2>
+                      <% element.he_description.forEach(description => { %>
+                       <p><%=description%></p>
+                      <% }) %>
+                      </div>
+                      <div class="price order-2">
+                        <strong><%=element.price%>₪</strong>
+                      </div> <!-- .menu-food-item -->
+                      </div>
+                <% } %>
+              <% }) %>
+            </div>
+                      </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
               <%- include('partials/footer'); %>
 
     <script src="js/jquery-3.2.1.min.js"></script>

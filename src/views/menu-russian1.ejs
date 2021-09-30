@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gambrinus MENU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="site-wrap">
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+            <div class="section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" data-aos="fade-up">
+                    <%- include('partials/header'); %>
+                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center;">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">закуски</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-seafood-tab" data-toggle="pill" href="#seafood" role="tab" aria-controls="pills-seafood" aria-selected="false">морепродукты</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-fish-tab" data-toggle="pill" href="#fish" role="tab" aria-controls="pills-fish" aria-selected="false">Рыба</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">мясо</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">напитки</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">коктейли</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">десерты</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].ru_name %></h2>
+                            <p><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].ru_description %></p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Чипс Гамбринус</h2>
+                            <p>Картофель нарезанный кубиками с болгарским сыром сверху </p>
+                            <p>Варианты: сыр сверху, сыр на стороне, сыр только на половину </p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('chips_gambrinus')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Картофель в "мундире" с грибным соусом В печи</h2>
+                            <p></p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mukram')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Грибы в сливочном соусе с сыром</h2>
+                            <p></p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('pitriyot')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Тост гамбринус/Тост с добавками</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('toast')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                      </div>
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
+                        
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Микс креветки и кальмары</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mix')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Креветки варёныe 500г</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mevushal')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <i class="icon" aria-hidden="true"></i>                          
+                            <h2>Креветки в чесночном соусе</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mahvat')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Креветки кальмары на вертеле ״острые״</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shipudim')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Креветки в сухарях жареные во фритюре</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('metugan')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Кальмары в сухарях жареные во фритюре</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kalamari')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Крабы морские варёныe 1кг</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('krab')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Раки 1кг</h2>
+                            <p> </p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('raki')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                      </div>
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Дэнис во фритюре</h2>
+                            <p>подается с чипсами ,салатом ,соусом и маслом</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Дэнис в печи</h2>
+                            <p>подается с картошкой ,салатом ,соусом и маслом</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Сибас в печи</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('seabass')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>сибас во фритюре</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('seabass')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Жареные морские рыбки 500г</h2>
+                            <p>подается с чипсами ,салатом ,соусом и маслом</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('bananot')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Форель копчёный в печи 500г</h2>
+                            <p>подается с картошкой ,салатом и соусом</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('forel')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        </div>
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>*Каждая мясная порция подается с картошкой ,салатом ,соусом и маслом</h2>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Телятина вырезка 500г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('netah')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Телятина Антрекот 350/650г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+  
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Антрекот в печи 350/650г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+  
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Рёбрышки свиные сперибс 900г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('spareribs')].price%>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Свиная шейная часть 700г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('lavan')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Филе свиное в печи 450/950г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('file_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('file_kaful')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+                          
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Рёбрышки бараньи 500г</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('keves')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Колбаски из баранины "На гриле"</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('naknikiyot')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          </div>
+
+                          <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
+
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <i class="icon" aria-hidden="true"></i>                          
+                                <h2>Чейсер JAMESON</h2>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('jameson')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Пиво 0.3/0.5</h2>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.3')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.5')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Пиво 0%</h2>
+                                <p>Heineken 0%</p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Вино</h2>
+                                <p>Белое вино - Gewurztraminer VillaWolf </p>
+                                <p>Красное вино - Каберне Совиньон и Мерло RECANATI Yasmin Red </p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('wine_bottle')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Холодные напитки</h2>
+                                <p>Coca-Cola, Coca-Cola Zero, Sprite,Sprite Zero, Miranda, содовая, Tonic</p>
+                                <p>Без газа: Апельсиновый (пригат),клюквенный,лимонад (пригат),Томатный,Минеральная вода. </p>
+                                <p>Все соки не выжатые и подаются в стакане.</p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kala')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Горячие напитки</h2>
+                                <p>Эспрессо ,Чай (мята,лимон)</p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('hama')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Айриш кофе</h2>
+                                <p>Эспрессо с ирландским Ликёром</p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            </div>
+                            <div class = "tab-pane fade" id = "cocktails" role = "tabpanel" aria-labeledby = "pills-cocktails-tab">
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> На основе текилы </h2>
+                                  <h3> "Маргарита со вкусом" </h3>
+                                  <p> Клубника / Малина </p> <!-- Лимон / -->
+                                  <h3> "Текила Сан Раис" </h3>
+                                  <p> Текила, Апельсин </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('takila_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> На основе водки </h2>
+                                  <h3> "Рапсодия" </h3>
+                                  <p> Водка, персиковый шнапс, малина, апельсин, лимон </p>
+                                  <h3> "Лонг-Айленд" </h3>
+                                  <p> Водка, ром, джин, текила, кола </p>
+                                  <h3> "Кобра" </h3>
+                                  <p> Водка, ром, джин, текила, апельсин </p>
+                                  <h3> "wonderland" </h3>
+                                  <p> Водка, газированная вода, лайм </p>
+                                  <h3> "Apple-Tini" </h3>
+                                  <p> Водка, яблочный шнапс, лимон, яблоко </p>
+                                  <h3> "Black Russian" </h3>
+                                  <p> Водка, кофейный ликер </p>
+                                  <h3> "Cosmopolitan" </h3>
+                                  <p> Водка, клюква, персиковый шнапс </p>
+                                  <h3> "Кровавая Мэри" </h3>
+                                  <p> Водка, томатный сок, лимон </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('vodka_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> На основе джина </h2>
+                                  <h3>"Сан-Франциско"</h3>
+                                  <p> джин, банановый ликер, апельсин </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> На основе Кампари</h2>
+                                  <h3> "Кампари" </h3>
+                                  <p> Апельсиновы сок / сода </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> На основе рома </h2>
+                                   <h3> "Мохито" </h3>
+                                   <p> Ром, мята, лимон </p>
+                                   <h3> "Дайкири" </h3>
+                                   <p> ром, лимон + клубника / малина </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('rum_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> на основе сливок </h2>
+                                   <h3> "Оргазм" </h3>
+                                   <p>Baileys, кофейный ликер, сливки, молоко </p>
+                                   <h3> "Perfect Lady" </h3>
+                                   <p>Baileys, кофейный ликер, сливки, Southern Comfort </p>
+                                   <h3> "White Russian" </h3>
+                                   <p> Водка, кофейный ликер, сливки </p>
+                                   </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('shament_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> На основе виски </h2>
+                                   <h3> "The Godfather "</h3>
+                                   <p> Виски, Амаретто </p>
+                                   <h3> "Rusty-Nail" </h3>
+                                   <p> Виски, Драмбой </p>
+                                   <h3> "sour" </h3>
+                                   <p> Виски / Ром / Текила </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('whiskey_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              </div>
+                              <div class = "tab-pane fade" id = "desserts" role = "tabpanel" aria-labeledby = "pills-desserts-tab">
+                                <div class="d-block d-md-flex menu-food-item">
+                                  <div class="text order-1 mb-3">
+                                    <h2>Ореховый пай / нутелла торт</h2>
+                                  </div>
+                                  <div class="price order-2">
+                                    <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
+                                  </div>
+                                </div> <!-- .menu-food-item -->
+    
+                                <div class="d-block d-md-flex menu-food-item">
+                                  <div class="text order-1 mb-3">
+                                    <h2>Мороженое Ben & Jerry's</h2>
+                                    <p> Chocolate Brownies - шоколадное мороженое с кусочками пирожных </p>
+                                    <p> Cookie Dough - ванильное мороженое с шоколадным тестом для печенья </p>
+                                    <p> Cookie Cream - изысканное мороженое с кремом и печеньем, наполненное ванильным кремом </p>
+                                    <p> Chunky Manky® - изысканное сливочное мороженое с бананами, кусочками помадки и грецкими орехами </p>
+                                    <p> Dolce de Leche - нежное сливочное мороженое с молочным джемом и помадой </p>
+                                  </div>
+                                  <div class="price order-2">
+                                    <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
+                                  </div>
+                                </div> <!-- .menu-food-item -->
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <%- include('partials/footer'); %>
+
+      
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+
+    <script src="js/aos.js"></script>
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

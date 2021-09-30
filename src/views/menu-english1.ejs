@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gambrinus MENU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="site-wrap">
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+            <div class="section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-8" data-aos="fade-up">
+                    <%- include('partials/header'); %>    
+                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center;">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">starters</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-seafood-tab" data-toggle="pill" href="#seafood" role="tab" aria-controls="pills-seafood" aria-selected="false">seafood</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-fish-tab" data-toggle="pill" href="#fish" role="tab" aria-controls="pills-fish" aria-selected="false">fish</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">meat</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">beverage</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">cocktails</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">desserts</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].en_name %></h2>
+                            <p><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].en_description %></p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('salad_gambrinus')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Gambrinus Chips</h2>
+                            <p>Diced potatoes with fetta cheese on top</p>
+                            <p>Options: cheese on top, cheese on the side, cheese only on half</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('chips_gambrinus')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Boiled potato(skin-on) with creamy mushroom sauce</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mukram')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Mushroom with creamy cheese sauce</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('pitriyot')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Gambrinus Toast / Toast with toppings</h2>
+                            <p> Optional toppings : tomato ,fetta cheese ,mushroom, onion</p>
+                            <p>*up to 3 toppings</p>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('toast')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                      </div>
+                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
+                        
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Fried breaded shrimp/calamri mix</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mix')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Cooked shrimp (shell on) 500g</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mevushal')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <i class="icon" aria-hidden="true"></i>                          
+                            <h2>Garlic butter shrimps</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('mahvat')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Grilled Spicy shrimp/calamri </h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('shipudim')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Fried breaded shrimps </h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('metugan')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Fried breaded calamari</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kalamari')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Boiled crab 1kg</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('krab')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Crayfish 1kg</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('raki')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+    
+                      </div>
+                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
+                        
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Fried sea bream </h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Oven baked sea bream</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('denis')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Oven baked seabass</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('seabass')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Fried seabass</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('seabass')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Fried small sea fish 500g</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('bananot')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+
+                        <div class="d-block d-md-flex menu-food-item">
+                          <div class="text order-1 mb-3">
+                            <h2>Oven baked smoked trout</h2>
+                          </div>
+                          <div class="price order-2">
+                            <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('forel')].price %>₪</strong>
+                          </div>
+                        </div> <!-- .menu-food-item -->
+                        </div>
+                        <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
+                        
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Butchers steak 500g</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('netah')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Aged Argentinian Entrecote 350/650g</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+  
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Oven roasted Entrecote 350/650g</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('entrecote_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('entrecote_kaful')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+  
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Grilled Spareribs 900g</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('spareribs')].price%>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Pork shoulder steam 700g</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('lavan')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Oven roasted pork fillet 450/950g </h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('file_boded')].price%>/<%=pr[pr.map(function (index) { return index.product }).indexOf('file_kaful')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+                          
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Lamb chops 500g</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('keves')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          <div class="d-block d-md-flex menu-food-item">
+                            <div class="text order-1 mb-3">
+                              <h2>Grilled lamb irish sausages</h2>
+                            </div>
+                            <div class="price order-2">
+                              <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('naknikiyot')].price %>₪</strong>
+                            </div>
+                          </div> <!-- .menu-food-item -->
+
+                          </div>
+
+                          <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
+                            
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <i class="icon" aria-hidden="true"></i>                          
+                                <h2>Ceaser - JAMESON</h2>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('jameson')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Beer 0.3/0.5</h2>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.3')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0.5')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Beer 0%</h2>
+                                <p>Heineken 0%</p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('beer_0')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Wine</h2>
+                                <p> White wine - Gewurztraminer VillaWolf </p>
+                                <p> Red wine - Cabernet Sauvignon and Merlot RECANATI Yasmin Red </p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('wine')].price %>/<%= pr[pr.map(function (index) { return index.product }).indexOf('wine_bottle')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Cold Drinks</h2>
+                                <p>Coca-Cola, Coca-Cola Zero, 7up, 7up zero, Miranda, soda, Tonic</p>
+                                <p>Mineral water,Orange(prigat),lemonade(prigat),cranberry,tomato</p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('kala')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Hot Drinks</h2>
+                                <p>Espresso, Tea (lemon,mint) </p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('hama')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            
+                            <div class="d-block d-md-flex menu-food-item">
+                              <div class="text order-1 mb-3">
+                                <h2>Irish Coffee</h2>
+                                <p> Espresso with irish liquor </p>
+                              </div>
+                              <div class="price order-2">
+                                <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('irish_coffee')].price %>₪</strong>
+                              </div>
+                            </div> <!-- .menu-food-item -->
+                            </div>
+                            <div class = "tab-pane fade" id = "cocktails" role = "tabpanel" aria-labeledby = "pills-cocktails-tab">
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Tequila-based </h2>
+                                  <h3> "Flavored Margarita" </h3>
+                                  <p> Strawberry / Raspberry </p> <!-- Lemon / -->
+                                  <h3> "Tequila Sun Rais" </h3>
+                                  <p> Tequila, Orange </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('takila_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Vodka-based </h2>
+                                  <h3> "Rhapsody" </h3>
+                                  <p> Vodka, peach schnapps, raspberry, orange, lemon </p>
+                                  <h3> "Long Island" </h3>
+                                  <p> Vodka, rum, gin, tequila, cola </p>
+                                  <h3> "Cobra" </h3>
+                                  <p> Vodka, rum, gin, tequila, orange </p>
+                                  <h3> "Wonderland" </h3>
+                                  <p> Vodka, soda water, lime </p>
+                                  <h3> "Apple-Tini" </h3>
+                                  <p> Vodka, apple schnapps, lemon, apple </p>
+                                  <h3> "Black Russian" </h3>
+                                  <p> Vodka, coffee liqueur </p>
+                                  <h3> "Cosmopolitan" </h3>
+                                  <p> Vodka, cranberries, peach schnapps </p>
+                                  <h3> "Bloody Mary" </h3>
+                                  <p> Vodka, tomato juice, lemon </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('vodka_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Gin-based </h2>
+                                  <h3>"San Francisco" </h3>
+                                  <p> gin, banana liqueur, orange </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2>Campari based</h2>
+                                  <h3> "Campari" </h3>
+                                  <p> Orange juice / Soda </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('gin_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Rum based </h2>
+                                  <h3> "Mojito" </h3>
+                                  <p> Rum, mint, lemon </p>
+                                  <h3> "Daikiri" </h3>
+                                  <p> rum, lemon + strawberry / raspberry </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('rum_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> based on Heavy Cream </h2>
+                                  <h3> "Orgasm" </h3>
+                                  <p>Baileys, coffee liqueur, sweet cream, milk </p>
+                                  <h3> "Perfect Lady" </h3>
+                                  <p>Baileys, coffee liqueur, sweet cream, Southern Comfort </p>
+                                  <h3> "White Russian" </h3>
+                                  <p> Vodka, coffee liqueur, sweet cream </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('shament_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              <div class = "d-block d-md-flex menu-food-item">
+                                <div class = "text order-1 mb-3">
+                                  <h2> Whiskey based </h2>
+                                  <h3> The Godfather "</h3>
+                                  <p> Whiskey, Amaretto </p>
+                                  <h3> "Rusty-Nail" </h3>
+                                  <p> Whiskey, Drumboy </p>
+                                  <h3> "sour" </h3>
+                                  <p> Whiskey / Rum / Tequila </p>
+                                </div>
+                                <div class = "price order-2">
+                                  <strong> <%= pr [pr.map (function (index) {return index.product}). indexOf ('whiskey_based')]. price%> ₪ </strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                            </div>
+                            <div class = "tab-pane fade" id = "desserts" role = "tabpanel" aria-labeledby = "pills-desserts-tab">
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>Walnut cream pie / Nutella sponge cake</h2>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('nutella')].price %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+  
+                              <div class="d-block d-md-flex menu-food-item">
+                                <div class="text order-1 mb-3">
+                                  <h2>Ben and Jerry's ice cream</h2>
+                                  <p> Chocolate Brownies - Chocolate ice cream with pieces of brownies </p>
+                                   <p> Cookie Dough - Vanilla ice cream with chocolate chip cookie dough </p>
+                                   <p> Cookie Cream - Fine Cream Ice Cream with Cookies Filled with Vanilla Cream </p>
+                                   <p> Chunky Manky® - Fine Cream Ice Cream with Bananas, Fudge Pieces and Walnuts </p>
+                                   <p> Dolce de Leche - Fine cream ice cream with milk jam and fudge </p>
+                                </div>
+                                <div class="price order-2">
+                                  <strong><%= pr[pr.map(function (index) { return index.product }).indexOf('glida')].price %>₪</strong>
+                                </div>
+                              </div> <!-- .menu-food-item -->
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <%- include('partials/footer'); %>
+
+      
+            <script src="js/jquery-3.2.1.min.js"></script>
+            <script src="js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/aos.js"></script>
+            <script src="js/main.js"></script>
+            
+  </body>
+</html>
