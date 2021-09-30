@@ -11,11 +11,11 @@ exports.grantAccess = function (action, resource) {
 			const user = await User.findById(req.params.id)
 			var permission = roles.can(req.user.role)[action](resource)
 			if (!permission.granted || !granted) {
-				throw new Error('You are not allowed to perform this action.')
+				throw new UserException('You are not allowed to perform this action.')
 			}
 			next()
 		} catch (error) {
-			res.status(401).send('You are not allowed to perform this action.')
+			res.status(401).send(error.message)
 		}
 	}
 }
@@ -23,12 +23,12 @@ exports.allowIfLoggedin = async (req, res, next) => {
 	try {
 		const user = res.locals.loggedInUser
 		if (!user) {
-			throw new Error('You need to be logged in to access this route')
+			throw new UserException('You need to be logged in to access this route')
 		}
 		req.user = user
 		next()
 	} catch (error) {
-		res.redirect('login')
+		return res.redirect('/login')
 	}
 }
 
@@ -44,11 +44,11 @@ exports.login = async (req, res, next) => {
 		const { username, password } = req.body
 		const user = await User.findOne({ username: username })
 		if (!user) {
-			throw 'username doesn`t exists!'
+			throw new UserException('username doesn`t exist!')
 		}
 		const validPassword = await validatePassword(password, user.password)
 		if (!validPassword) {
-			throw 'Password isn`t correct.'
+			throw new UserException('Password isn`t correct.')
 		}
 		const accessToken = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
 			expiresIn: '1d',
@@ -63,7 +63,7 @@ exports.login = async (req, res, next) => {
 		await User.findByIdAndUpdate(user._id, { accessToken })
 		res.redirect('admin')
 	} catch (error) {
-		req.error = error
+		req.error = error.message
 		next()
 	}
 }
@@ -71,6 +71,11 @@ exports.login = async (req, res, next) => {
 exports.getPrices = async (req, res, next) => {
 	const prices = await Price.find({})
 	req.params.prices = prices
+	next()
+}
+exports.getPrice = async (req, res, next) => {
+	const edit_ID = await Price.findOne({ _id: req.params.id })
+	req.params.edit_ID = edit_ID
 	next()
 }
 exports.addProduct = async (req, res, next) => {
@@ -82,25 +87,41 @@ exports.addProduct = async (req, res, next) => {
 	Price.save()
 }
 exports.updatePrice = async (req, res, next) => {
-	let productID = req.body.product_id
-	let price = req.body.new_price
-	let split_productID_index = productID.split(',')
-	let index = split_productID_index[1]
-	productID = split_productID_index[0]
+	// console.log(req.body)
+	const productID = req.body.product_id
 	let product = await Price.findByIdAndUpdate(productID, {
-		price: price[index],
+		he_name: req.body.he_name,
+		he_description: req.body.he_description,
+		ru_name: req.body.ru_name,
+		ru_description: req.body.ru_description,
+		en_name: req.body.en_name,
+		en_description: req.body.en_description,
+		price: req.body.price,
+		tag: req.body.tag,
+		recommended: req.body.recommended,
 	})
-	res.redirect(req.get('referer'))
+	next()
+}
+exports.deleteProduct = async (req, res) => {
+	const product_ID = req.body.delete_ID
+	await Price.findByIdAndDelete(product_ID)
 }
 exports.denyIfLoggedin = async (req, res, next) => {
 	try {
 		const user = res.locals.loggedInUser
 		if (user) {
-			throw new Error('You already loggedin.')
+			throw new UserException('You already loggedin.')
 		} else {
 			next()
 		}
 	} catch (error) {
-		res.status(401).send('you already loggedin.')
+		res.status(401).send(error.message)
 	}
 }
+
+//! EXCEPTIONS
+
+function UserException(message) {
+	this.message = message
+}
+//!
