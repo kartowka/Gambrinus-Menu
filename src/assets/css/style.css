@@ -17,9 +17,16 @@ body {
   background-attachment: fixed;
 
 }
+.hebrew_text {
+  direction: rtl;
+}
+.hebrew_text_alignment {
+  direction: rtl;
+  text-align: right;
+}
 table { 
   width: 100%; 
-  border-collapse: collapse; 
+  border-collapse: collapse;  
 }
 th { 
   background: #333; 
@@ -29,7 +36,7 @@ th {
 td, th { 
   padding: 3px; 
   border: 1px solid #ccc; 
-  text-align: left; 
+  text-align: center;
 }
 .icon {
   background: url('/img/recommended.png');
@@ -398,7 +405,7 @@ textarea.form-control {
     width: 100%;
     margin-bottom: 30px;
   }
-  table, thead, tbody, th, td, tr { 
+  table, thead, tbody, th, td, tr {
 		display: block;
     text-align: center;
 	}
