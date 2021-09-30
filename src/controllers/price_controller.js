@@ -79,12 +79,18 @@ exports.getPrice = async (req, res, next) => {
 	next()
 }
 exports.addProduct = async (req, res, next) => {
-	const { product, price } = req.body
-	const newProduct = new Price({
-		product,
-		price,
-	})
-	Price.save()
+	await new Price({
+		product: req.body.product,
+		he_name: req.body.he_name,
+		he_description: req.body.he_description,
+		ru_name: req.body.ru_name,
+		ru_description: req.body.ru_description,
+		en_name: req.body.en_name,
+		en_description: req.body.en_description,
+		price: req.body.price,
+		tag: req.body.tag,
+		recommended: req.body.recommended,
+	}).save()
 }
 exports.updatePrice = async (req, res, next) => {
 	// console.log(req.body)
