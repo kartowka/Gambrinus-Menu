@@ -1,255 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Gambrinus - Admin Panel</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet">
+	<head>
+		<title>Gambrinus - Admin Panel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="/css/bootstrap.css" />
+		<link rel="stylesheet" href="/css/animate.css" />
+		<link rel="stylesheet" href="/css/owl.carousel.min.css" />
 
-    <link rel="stylesheet" href="/css/magnific-popup.css">
-    <link rel="stylesheet" href="/css/aos.css">
+		<link rel="stylesheet" href="/css/magnific-popup.css" />
+		<link rel="stylesheet" href="/css/aos.css" />
 
-    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+		<link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
+		<link rel="stylesheet" href="/css/jquery.timepicker.css" />
 
-    <link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css" />
+		<link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+		<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    
+		<!-- Theme Style -->
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<div class="site-wrap">
+			<div class="main-wrap">
+				<div class="cover_1 cover_sm">
+					<div class="section">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-md-8" data-aos="fade-up">
+									<ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center; direction: rtl">
+										<li class="nav-item">
+											<a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">מנות פתיחה</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-seafood-tab" data-toggle="pill" href="#seafood" role="tab" aria-controls="pills-seafood" aria-selected="false">פירות ים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-fish-tab" data-toggle="pill" href="#fish" role="tab" aria-controls="pills-fish" aria-selected="false">דגים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">בשרים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">משקאות</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">קוקטיילים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">קינוחים</a>
+										</li>
+									</ul>
+									<form method="POST">
+										<div class="tab-content" id="pills-tabContent">
+											<div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'starters') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'seafood') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'fish') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'meat') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'beverage') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'cocktails') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
+												<table class="table my-0" id="dataTable">
+													<thead>
+														<tr>
+															<th>מוצר</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% pr.forEach(element => { %> <% if (element.tag== 'desserts') { %>
+														<tr>
+															<td><%=element.he_name %></td>
+															<td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
+															<td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
+														</tr>
+														<% } %> <% }) %>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</form>
+                  <a href="javascript:history.back()">Back to previous page</a>
+                  <%- include('partials/footer'); %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="site-wrap">
-      <div class="main-wrap">
-        <div class="cover_1 cover_sm">
-            <div class="section">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-md-8" data-aos="fade-up">
-                    <ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center; direction: rtl;">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">מנות פתיחה</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-seafood-tab" data-toggle="pill" href="#seafood" role="tab" aria-controls="pills-seafood" aria-selected="false">פירות ים</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-fish-tab" data-toggle="pill" href="#fish" role="tab" aria-controls="pills-fish" aria-selected="false">דגים</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">בשרים</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">משקאות</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">קוקטיילים</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">קינוחים</a>
-                      </li>
-                    </ul>
-                    <form method="POST">
-                    <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
-                            <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                                <table class="table my-0" id="dataTable">
-                                  <thead>
-                                    <tr>
-                                      <th>מוצר</th>
-                                      <th></th>
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% pr.forEach(element => { %>
-                                      <% if (element.tag== 'starters') { %>
-                                      <tr>
-                                        <td><%=element.he_name %></td>
-                                        <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                                        <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                                      </tr>
-                                      <% } %>
-                                      <% }) %>
-                                  </tbody>
-                                </table>
-                              </div>
-                      </div>
-                      <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" >
-                        <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                            <table class="table my-0" id="dataTable">
-                              <thead>
-                                <tr>
-                                  <th>מוצר</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <% pr.forEach(element => { %>
-                                  <% if (element.tag== 'seafood') { %>
-                                  <tr>
-                                    <td><%=element.he_name %></td>
-                                    <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                                    <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                                  </tr>
-                                  <% } %>
-                                  <% }) %>
-                              </tbody>
-                            </table>
-                          </div>
-                      </div>
-                      <div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
-                        <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                            <table class="table my-0" id="dataTable">
-                              <thead>
-                                <tr>
-                                  <th>מוצר</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <% pr.forEach(element => { %>
-                                  <% if (element.tag== 'fish') { %>
-                                    <tr>
-                                      <td><%=element.he_name %></td>
-                                      <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                                      <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                                    </tr>
-                                  <% } %>
-                                <% }) %>
-                              </tbody>
-                            </table>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
-                        <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                            <table class="table my-0" id="dataTable">
-                              <thead>
-                                <tr>
-                                  <th>מוצר</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <% pr.forEach(element => { %>
-                                  <% if (element.tag== 'meat') { %>
-                                  <tr>
-                                    <td><%=element.he_name %></td>
-                                    <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                                    <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                                  </tr>
-                                  <% } %>
-                                  <% }) %>
-                              </tbody>
-                            </table>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
-                        <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                            <table class="table my-0" id="dataTable">
-                              <thead>
-                                <tr>
-                                  <th>מוצר</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <% pr.forEach(element => { %>
-                                  <% if (element.tag== 'beverage') { %>
-                                  <tr>
-                                    <td><%=element.he_name %></td>
-                                    <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                                    <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                                  </tr>
-                                  <% } %>
-                                  <% }) %>
-                              </tbody>
-                            </table>
-                          </div>
-                  </div>
-                  <div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab">
-                    <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                        <table class="table my-0" id="dataTable">
-                          <thead>
-                            <tr>
-                              <th>מוצר</th>
-                              <th></th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <% pr.forEach(element => { %>
-                              <% if (element.tag== 'cocktails') { %>
-                              <tr>
-                                <td><%=element.he_name %></td>
-                                <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                                <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                              </tr>
-                              <% } %>
-                              <% }) %>
-                          </tbody>
-                        </table>
-                      </div>
-              </div>
-              <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
-                <div class="d-block d-md-flex menu-food-item text-center" id="dataTable" role="grid" aria-describedby="dataTable_info"">
-                    <table class="table my-0" id="dataTable">
-                      <thead>
-                        <tr>
-                          <th>מוצר</th>
-                          <th></th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <% pr.forEach(element => { %>
-                          <% if (element.tag== 'desserts') { %>
-                          <tr>
-                            <td><%=element.he_name %></td>
-                            <td><button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=element.id%>" name="edit_ID">Edit</button></td>
-                            <td><button class="btn btn-danger" type="submit" onclick="" id="remove_btn" value="<%=element.id%>" name="delete_ID">Delete</button></td>
-                          </tr>
-                          <% } %>
-                          <% }) %>
-                      </tbody>
-                    </table>
-                  </div>
-              </div>
-              <a href = "javascript:history.back()">Back to previous page</a>
-              <%- include('partials/footer'); %>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-                  
-                    <script src="js/jquery-3.2.1.min.js"></script>
-                    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-                    <script src="js/popper.min.js"></script>
-                    <script src="js/bootstrap.min.js"></script>
-                    <script src="js/owl.carousel.min.js"></script>
-                    <script src="js/aos.js"></script>
-                    <script src="js/main.js"></script>
-
-                    
-          </body>
-        </html>
-
-
-
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script src="/js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>

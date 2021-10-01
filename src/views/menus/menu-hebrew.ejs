@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Gambrinus MENU</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet" />
+
+		<link rel="stylesheet" href="/css/bootstrap.css" />
+		<link rel="stylesheet" href="/css/animate.css" />
+		<link rel="stylesheet" href="/css/owl.carousel.min.css" />
+
+		<link rel="stylesheet" href="/css/magnific-popup.css" />
+		<link rel="stylesheet" href="/css/aos.css" />
+
+		<link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css" />
+		<link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" />
+
+		<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
+		<!-- Theme Style -->
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+
+	<body>
+		<div class="site-wrap">
+			<div class="main-wrap">
+				<div class="cover_1 cover_sm">
+					<div class="section">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-md-8" data-aos="fade-up">
+									<%- include('../partials/header'); %>
+									<ul class="nav site-tab-nav" id="pills-tab" role="tablist" style="text-align: center; direction: rtl">
+										<li class="nav-item">
+											<a class="nav-link active" id="pills-starters-tab" data-toggle="pill" href="#pills-starters" role="tab" aria-controls="pills-starters" aria-selected="true">מנות פתיחה</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-seafood-tab" data-toggle="pill" href="#seafood" role="tab" aria-controls="pills-seafood" aria-selected="false">פירות ים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-fish-tab" data-toggle="pill" href="#fish" role="tab" aria-controls="pills-fish" aria-selected="false">דגים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-meat-tab" data-toggle="pill" href="#meat" role="tab" aria-controls="pills-meat" aria-selected="false">בשרים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-beverage-tab" data-toggle="pill" href="#beverage" role="tab" aria-controls="pills-beverage" aria-selected="false">משקאות</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-cocktails-tab" data-toggle="pill" href="#cocktails" role="tab" aria-controls="pills-cocktails" aria-selected="false">קוקטיילים</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="pills-desserts" aria-selected="false">קינוחים</a>
+										</li>
+									</ul>
+									<div class="tab-content" id="pills-tabContent">
+										<div class="tab-pane fade show active" id="pills-starters" role="tabpanel" aria-labelledby="pills-starters-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'starters') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+										<div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="pills-seafood-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'seafood') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+										<div class="tab-pane fade" id="fish" role="tabpanel" aria-labelledby="pills-fish-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'fish') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+										<div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="pills-meat-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'meat') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+										<div class="tab-pane fade" id="beverage" role="tabpanel" aria-labelledby="pills-beverage-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'beverage') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+										<div class="tab-pane fade" id="cocktails" role="tabpanel" aria-labelledby="pills-cocktails-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'cocktails') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+										<div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
+											<% pr.forEach(element => { %> <% if (element.tag== 'desserts') { %>
+											<div class="d-block d-md-flex menu-food-item">
+												<div class="text order-1 mb-3 hebrew_text">
+													<% if (element.recommended == 'true') { %>
+													<i class="icon" aria-hidden="true"></i>
+													<% } %>
+													<h2><%=element.he_name%></h2>
+													<% element.he_description.forEach(description => { %>
+													<p><%=description%></p>
+													<% }) %>
+												</div>
+												<div class="price order-2">
+													<strong><%=element.price%>₪</strong>
+												</div>
+												<!-- .menu-food-item -->
+											</div>
+											<% } %> <% }) %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%- include('../partials/footer'); %>
+
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script src="/js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
