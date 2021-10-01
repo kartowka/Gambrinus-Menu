@@ -153,7 +153,9 @@
 											<% pr.forEach(element => { %> <% if (element.tag== 'cocktails') { %>
 											<div class="d-block d-md-flex menu-food-item">
 												<div class="text order-1 mb-3">
-													<i class="icon" aria-hidden="true"></i>
+													<% if (element.recommended == 'true') { %>
+														<i class="icon" aria-hidden="true"></i>
+														<% } %>
 													<h2><%=element.en_name%></h2>
 													<% element.en_description.forEach(description => { %>
 													<p><%=description%></p>
