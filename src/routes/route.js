@@ -2,16 +2,16 @@ const express = require('express')
 const router = express.Router()
 const price_controller = require('../controllers/price_controller')
 
-router.route('/').get(price_controller.getPrices, (req, res) => {
+router.route('/menu-hebrew').get(price_controller.getPrices, (req, res) => {
 	res.render('menus/menu-hebrew', { pr: req.params.prices })
 })
-router.route('/english').get(price_controller.getPrices, (req, res) => {
+router.route('/menu-english').get(price_controller.getPrices, (req, res) => {
 	res.render('menus/menu-english', { pr: req.params.prices })
 })
-router.route('/russian').get(price_controller.getPrices, (req, res) => {
+router.route('/menu-russian').get(price_controller.getPrices, (req, res) => {
 	res.render('menus/menu-russian', { pr: req.params.prices })
 })
-router.route('/homepage').get((req, res) => {
+router.route('/').get((req, res) => {
 	res.render('homepage')
 })
 router

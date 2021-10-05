@@ -1,11 +1,39 @@
 <script src="/scripts/site/script/main.js"></script>
 <script src="/scripts/dist/accessibility.min.js"></script>
-<div class="dropdown" style="text-align: center">
-	<button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-toggle="dropdown" type="button" style="background: var(--red)">Language</button>
-	<div class="dropdown-menu" style="text-align: center">
-		<a class="dropdown-item" href="/" style="text-align: center">עברית</a><a class="dropdown-item" href="/russian" style="text-align: center">Русский</a
-		><a class="dropdown-item" href="/english" style="text-align: center">English</a>
+<nav class="navbar navbar-expand-lg sticky-top">
+	<a class="navbar-brand" href="/">
+		<img src="/img/gambrinus_logo.png" width="200" height="30" alt="" />
+	</a>
+	<button
+		class="navbar-toggler custom-toggler"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarNavAltMarkup"
+		aria-controls="navbarNavAltMarkup"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse hebrew_text" id="navbarNavAltMarkup">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="/">בית <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/">אודות</a>
+			</li>
+			<li class="nav-item dropdown dropdown-hover">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> תפריטים </a>
+				<div class="dropdown-menu dropdown-hover-menu text-center" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="/menu-hebrew">עברית</a>
+					<a class="dropdown-item" href="/menu-russian">Русский</a>
+					<a class="dropdown-item" href="/menu-english">English</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/">צור קשר</a>
+			</li>
+		</ul>
 	</div>
-	<br />
-	<br />
-</div>
+</nav>

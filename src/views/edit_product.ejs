@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css" />
 		<link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" />
 
-		<link rel="stylesheet" href="/onts/flaticon/font/flaticon.css" />
+		<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
 
 		<!-- Theme Style -->
 		<link rel="stylesheet" href="/css/style.css" />
@@ -105,7 +105,7 @@
 											<div class="form-group">
 												<label for="tag">תווית</label>
 												<select name="tag" class="form-control form-control-user hebrew_text" placeholder="Select tag" id="tag" style="height: 65px" required>
-													<option value="" disabled="" selected="">לחץ לבחירה</option>
+													<option value="" disabled selected>לחץ לבחירה</option>
 													<option value="starters">מנות פתיחה</option>
 													<option value="seafood">פירות ים</option>
 													<option value="fish">דגים</option>
@@ -127,8 +127,8 @@
 												<button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=pr.id%>" name="product_id">Save</button>
 											</div>
 										</form>
-										<a href="javascript:history.back()">Back to previous page</a>
 									</div>
+									<a href="javascript:history.back()">Back to previous page</a>
 									<%- include('partials/footer'); %>
 								</div>
 							</div>

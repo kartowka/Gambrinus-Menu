@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
     "lint": "eslint src/**/*.js --color",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "compile:sass": "node-sass src/assets/sass/main.scss src/assets/css/animate_hamburger.css -w"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "fs": "^0.0.1-security",
-    "nodemon": "^2.0.12"
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
+    "sass": "^1.42.1"
   }
 }
