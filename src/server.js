@@ -11,6 +11,8 @@ const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser')
 const User = require('./models/admin_user')
 const jwt = require('jsonwebtoken')
+
+//! SSL //
 const forceSsl = require('express-force-ssl')
 // Certificate
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/privkey.pem', 'utf8')
@@ -22,6 +24,13 @@ const credentials = {
 	cert: certificate,
 	ca: ca,
 }
+app.use(forceSsl)
+https.createServer(credentials, app).listen(443, () => {
+	console.log(`App is running. serve at port: ${appPort}`)
+	console.log(`https://127.0.0.1:${appPort}`)
+})
+
+//! END SSL //
 
 app.use(cookieParser())
 app.locals.userLoggedIn = 0
@@ -44,7 +53,6 @@ mongoose
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
-app.use(forceSsl)
 app.use(async (req, res, next) => {
 	if (req.cookies['x-access-token']) {
 		try {
@@ -90,10 +98,7 @@ app.use('/', routes)
 // 	console.log(`App is running. serve at port: ${appPort}`)
 // 	console.log(`http://127.0.0.1:${appPort}`)
 // })
-https.createServer(credentials, app).listen(443, () => {
-	console.log(`App is running. serve at port: ${appPort}`)
-	console.log(`https://127.0.0.1:${appPort}`)
-})
+
 http.createServer(app).listen(80)
 
 // const httpServer = http.createServer(app)
