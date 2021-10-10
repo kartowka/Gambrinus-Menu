@@ -3,6 +3,7 @@
 	<head>
 		<title>Gambrinus</title>
 		<meta charset="utf-8" />
+		<meta name="google-site-verification" content="pp0GzWLAfGvRMh13SL9kLuxT_gnhFkCOlVOBObRtuEA" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet" />
 
@@ -21,8 +22,43 @@
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/animate_hamburger.css" />
 	</head>
-	<body>
+	<body id="page-top">
 		<%- include('partials/header'); %>
+		<section id="home">
+			<div class="container">
+				<h2 class="text-uppercase text-warning mb-2">עדכונים</h2>
+				<hr class="star-dark mb-5" />
+				<div class="row">
+					<div class="col-lg-8 hebrew_text_alignment">
+						<div id="pc-details" tabindex="0">
+							<% homepage[0].he_description.forEach(element => { %>
+							<p><%=element%></p>
+							<% }) %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<br>
+		<br>
+		<br>
+		<br>
+		<section id="contact">
+			<div class="container">
+				<h2 class="text-uppercase text-warning mb-2">יצירת קשר</h2>
+				<hr class="star-dark mb-5" />
+				<div class="row">
+					<div class="col-lg-8 hebrew_text_alignment">
+						<div id="pc-details" tabindex="0">
+							<% homepage[0].contact_details.forEach(element => { %>
+								<p><%=element%></p>
+								<% }) %>
+							<p><a href="tel:<%=homepage[0].tel%>">טלפון: <%=homepage[0].tel_show%></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<%- include('partials/footer'); %>
 		<script src="/js/jquery-3.2.1.min.js"></script>
 		<script src="/js/jquery-migrate-3.0.1.min.js"></script>
@@ -31,5 +67,6 @@
 		<script src="/js/owl.carousel.min.js"></script>
 		<script src="/js/aos.js"></script>
 		<script src="/js/main.js"></script>
+		<script src="/js/freelancer.js"></script>
 	</body>
 </html>

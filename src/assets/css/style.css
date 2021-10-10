@@ -1,37 +1,56 @@
+@font-face {
+	font-family: Durwent;
+	src: url('/fonts/Durwent.ttf');
+}
 html {
 	overflow-x: hidden;
 }
-.navbar .navbar-nav .nav-link {
-    color: white;
-    font-size: 1.1em;
+.change-dropdown-menu {
+	background-color: transparent;
 }
-.navbar .navbar-nav .nav-link:hover{
-    color: #808080;
+.navbar-brand {
+	font-family: 'Durwent';
+	font-size: 40px;
+	color: red;
+	margin-left: 50px;
+}
+.dropdown-item {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+.navbar-brand:hover {
+	color: red;
+}
+.navbar .navbar-nav .nav-link {
+	color: white;
+	font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover {
+	color: red;
 }
 @media only screen and (min-width: 960px) {
-  .dropdown-hover:hover .dropdown-hover-menu {
-    display: block;
-    margin-top: 0;
-  }
-  .dropdown-hover:hover .dropdown-toggle::after {
-    border-bottom: 0.3em solid;
-    border-top: 0;
-  }
+	.dropdown-hover:hover .dropdown-hover-menu {
+		display: block;
+		margin-top: 0;
+	}
+	.dropdown-hover:hover .dropdown-toggle::after {
+		border-bottom: 0.3em solid;
+		border-top: 0;
+	}
 }
 .dropdown-hover.show .dropdown-toggle::after {
-  border-bottom: 0.3em solid;
-  border-top: 0;
+	border-bottom: 0.3em solid;
+	border-top: 0;
 }
-.navbar{
-background-color: #000;
+.navbar {
+	background-color: transparent;
 }
-.custom-toggler .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-  
-  .custom-toggler.navbar-toggler {
-	border-color:rgb(255, 255, 255);
-  } 
+
+.custom-toggler.navbar-toggler {
+	border-color: rgb(255, 255, 255);
+	color: white;
+}
 body {
 	/*background-image: url("/img/slider-1-1.jpg");*/
 	background-image: url('/img/bg_pc.jpg');
@@ -523,7 +542,6 @@ textarea.form-control {
 .services-section {
 	background: url('../img/curve_line.svg') repeat-x bottom left;
 }
-
 .site-footer {
 	background: url('../img/curve_line.svg') repeat-x top left;
 	padding: 7em 0;

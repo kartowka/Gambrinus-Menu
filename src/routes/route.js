@@ -11,8 +11,8 @@ router.route('/menu-english').get(price_controller.getPrices, (req, res) => {
 router.route('/menu-russian').get(price_controller.getPrices, (req, res) => {
 	res.render('menus/menu-russian', { pr: req.params.prices })
 })
-router.route('/').get((req, res) => {
-	res.render('homepage')
+router.route('/').get(price_controller.getHomepageDetails, (req, res) => {
+	res.render('homepage', { homepage: req.params.homepage })
 })
 router
 	.route('/login')
@@ -44,6 +44,15 @@ router
 	})
 	.post(async (req, res) => {
 		await price_controller.addProduct(req, res)
+		res.redirect(req.get('referer'))
+	})
+router
+	.route('/edit_homepage')
+	.get(price_controller.allowIfLoggedin, price_controller.grantAccess('readAny', 'price_settings'), price_controller.getHomepageDetails, (req, res) => {
+		res.render('edit_homepage', { homepage: req.params.homepage })
+	})
+	.post(async (req, res) => {
+		await price_controller.setHomepageDetails(req, res)
 		res.redirect(req.get('referer'))
 	})
 router

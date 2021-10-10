@@ -1,4 +1,5 @@
 const Price = require('../models/price_model')
+const Homepage = require('../models/homepage')
 const { roles } = require('../roles/roles')
 const User = require('../models/admin_user')
 const jwt = require('jsonwebtoken')
@@ -77,6 +78,23 @@ exports.getPrice = async (req, res, next) => {
 	const edit_ID = await Price.findOne({ _id: req.params.id })
 	req.params.edit_ID = edit_ID
 	next()
+}
+exports.getHomepageDetails = async (req, res, next) => {
+	const details = await Homepage.find({})
+	req.params.homepage = details
+	next()
+}
+exports.setHomepageDetails = async (req, res, next) => {
+	const tel_show_split = '0' + req.body.tel.slice(5, -1)
+	console.log(tel_show_split)
+	let update = await Homepage.findByIdAndUpdate(req.body.id, {
+		he_description: req.body.he_description,
+		ru_description: req.body.ru_description,
+		en_description: req.body.en_description,
+		tel: req.body.tel,
+		tel_show: tel_show_split,
+		contact_details: req.body.contact_details,
+	})
 }
 exports.addProduct = async (req, res, next) => {
 	await new Price({

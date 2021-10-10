@@ -1,10 +1,51 @@
 <link rel="stylesheet" href="/assets/css/Footer-Basic.css" />
-<footer class="bg-black sticky-footer">
+<br>
+<br>
+<br>
+<br>
+<footer class="text-center footer">
+	<div class="container">
+		<div class="row hebrew_text">
+			<div class="col-md-4 mb-5 mb-lg-0">
+				<h4>מיקום</h4>
+				<div class="card-body">
+					<div class="text-muted" vocab="http://schema.org/" typeof="Place">
+						<strong property="name">גמברינוס</strong><br />
+						<div property="address" typeof="PostalAddress">
+							<div property="streetAddress">הציונות 45</div>
+							<div property="addressLocality">אשדוד</div>
+						</div>
+					</div>
+					<div class="showtheway">
+						<a href="https://showtheway.io/to/31.786268,34.64576?name=Gambrinus" target="_blank" title="Show the Way to Gambrinus with your favorite navigation application">Show the Way</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-5 mb-lg-0">
+				<h4 class="text-uppercase mb-4">שעות פעילות</h4>
+				<p class="lead mb-0">
+					<span> שני - חמישי : 17:00 - 23:15</span>
+				</p>
+				<p class="lead mb-0">
+					<span> שישי - שבת : 12:00 - 23:15</span>
+				</p>
+			</div>
+			<div class="col-md-4 mb-5 mb-lg-0">
+				<h4 class="text-uppercase mb-4">יצירת קשר</h4>
+				<p class="lead mb-0">
+					<a href="tel:+972-8-8677875">08-8677875</a>
+				</p>
+			</div>
+		</div>
+	</div>
 	<div>
 		&copy;
 		<span id="copyright">
-			<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+			<script>
+				document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+			</script>
 		</span>
 		Gambrinus
 	</div>
 </footer>
+<script src="https://showtheway.io/w.js" async="async" type="text/javascript"></script>

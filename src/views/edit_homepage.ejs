@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Gambrinus edit homepage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700" rel="stylesheet" />
+
+		<link rel="stylesheet" href="/css/bootstrap.css" />
+		<link rel="stylesheet" href="/css/animate.css" />
+		<link rel="stylesheet" href="/css/owl.carousel.min.css" />
+
+		<link rel="stylesheet" href="/css/magnific-popup.css" />
+		<link rel="stylesheet" href="/css/aos.css" />
+
+		<link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
+		<link rel="stylesheet" href="/css/jquery.timepicker.css" />
+
+		<link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css" />
+		<link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css" />
+
+		<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
+
+		<!-- Theme Style -->
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<%- include('partials/header'); %>
+		<div class="site-wrap">
+			<div class="main-wrap">
+				<div class="cover_1 cover_sm">
+					<div class="section">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-md-8" data-aos="fade-up">
+									<div class="card-body">
+                                        <h1>עדכון דף הבית</h1>
+                                        <br>
+										<form method="POST">
+                                            <div class="he_descriptions">
+                                                <% homepage[0].he_description.forEach(element => { %>
+												<div class="form-group hebrew_text">
+													<label for="he_name">עדכונים</label>
+													<textarea class="form-control" placeholder="<%= element %> " id="he_description" name="he_description[]"><%= element %> </textarea>
+												</div>
+                                                <% }) %>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<a href="javascript:void(0);" id="add_he_description" class="btn btn-primary mb-3">הוספת תיאור נוסף</a>
+												</div>
+												<div class="form-group col-md-6">
+													<a href="javascript:void(0);" id="delete_he_description" class="btn btn-danger mb-3">הוסרת תיאור אחרון</a>
+												</div>
+											</div>
+                                            <h1>עדכון צור קשר</h1>
+                                            <br>
+                                            <div class="contact_details">
+                                                <% homepage[0].contact_details.forEach(element => { %>
+												<div class="form-group hebrew_text">
+													<label for="he_name">פרטי התקשרות</label>
+													<textarea class="form-control" placeholder="<%= element %> " id="contact_details" name="contact_details[]"><%= element %> </textarea>
+												</div>
+                                                <% }) %>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<a href="javascript:void(0);" id="add_contact_details" class="btn btn-primary mb-3">הוספת תיאור נוסף</a>
+												</div>
+												<div class="form-group col-md-6">
+													<a href="javascript:void(0);" id="delete_contact_details" class="btn btn-danger mb-3">הוסרת תיאור אחרון</a>
+												</div>
+											</div>
+                                            <div class="form-group">
+                                                <label for="he_name">טלפון</label>
+                                                <textarea class="form-control" placeholder="<%= homepage[0].tel %> " id="tel" name="tel"><%= homepage[0].tel %> </textarea>
+                                            </div>
+											<div class="form-group">
+												<button class="btn btn-primary" type="submit" onclick="" id="edit_btn" value="<%=homepage[0].id%>" name="id">Save</button>
+											</div>
+										</form>
+									<a href="javascript:history.back()">Back to previous page</a>
+									<%- include('partials/footer'); %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script src="/js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/description_add.js"></script>
+	</body>
+</html>

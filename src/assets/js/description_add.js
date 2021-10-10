@@ -2,8 +2,7 @@ $(document).ready(function () {
 	let addButton = document.getElementById('add_he_description') //Add button selector
 	let removeButton = document.getElementById('delete_he_description')
 	let wrapper = document.getElementsByClassName('he_descriptions') //Input field wrapper
-	let fieldHTML =
-		'<div class="form-group hebrew_text"><label for="he_name">תיאור</label><textarea class="form-control" placeholder="תיאור" id=he_description name="he_description[]"></textarea></div>'
+	let fieldHTML = '<div class="form-group hebrew_text"><label for="he_name">תיאור</label><textarea class="form-control" placeholder="תיאור" id=he_description name="he_description[]"></textarea></div>'
 	//Once add button is clicked
 	$(addButton).click(function () {
 		$(wrapper).append(fieldHTML) //Add field html
@@ -33,6 +32,21 @@ $(document).ready(function () {
 	let wrapper = document.getElementsByClassName('en_descriptions') //Input field wrapper
 	let fieldHTML =
 		'<div class="form-group"><label for="en_description">Description</label><textarea class="form-control" placeholder="Description" id=en_description name="en_description[]"></textarea></div>'
+
+	//Once add button is clicked
+	$(addButton).click(function () {
+		$(wrapper).append(fieldHTML) //Add field html
+	})
+	$(removeButton).click(function () {
+		$(wrapper).find('div:last').remove()
+	})
+})
+
+$(document).ready(function () {
+	let addButton = document.getElementById('add_contact_details') //Add button selector
+	let removeButton = document.getElementById('delete_contact_details')
+	let wrapper = document.getElementsByClassName('contact_details') //Input field wrapper
+	let fieldHTML = '<div class="form-group hebrew_text"><label for="he_name">תיאור</label><textarea class="form-control" placeholder="תיאור" id=he_description name="he_description[]"></textarea></div>'
 
 	//Once add button is clicked
 	$(addButton).click(function () {
