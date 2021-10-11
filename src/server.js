@@ -12,26 +12,6 @@ const cookieParser = require('cookie-parser')
 const User = require('./models/admin_user')
 const jwt = require('jsonwebtoken')
 
-//! SSL //
-const forceSsl = require('express-force-ssl')
-// Certificate
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/privkey.pem', 'utf8')
-const certificate = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/cert.pem', 'utf8')
-const ca = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/chain.pem', 'utf8')
-
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca,
-}
-app.use(forceSsl)
-https.createServer(credentials, app).listen(443, () => {
-	console.log(`App is running. serve at port: ${appPort}`)
-	console.log(`https://127.0.0.1:${appPort}`)
-})
-
-//! END SSL //
-
 app.use(cookieParser())
 app.locals.userLoggedIn = 0
 app.locals.userID = ''
@@ -40,7 +20,6 @@ app.locals.userRole = ''
 require('dotenv').config({
 	path: path.join(__dirname, './.env'),
 })
-const appPort = process.env.PORT
 
 //connect to mongodb
 mongoose
@@ -99,27 +78,30 @@ app.use('/', routes)
 // 	console.log(`http://127.0.0.1:${appPort}`)
 // })
 
-http.createServer(app).listen(80)
+http.createServer(app).listen(80, () => {
+	console.log(`App is running. serve at port: ${process.env.PORT}`)
+	console.log(`http://127.0.0.1:${process.env.PORT}`)
+})
 
-// const httpServer = http.createServer(app)
-// const httpsServer = https.createServer(credentials, app)
+//! SSL //
 
-// httpServer.listen(80, () => {
-// 	console.log('HTTP Server running on port 80')
-// })
+const forceSsl = require('express-force-ssl')
 
-// httpsServer.listen(443, () => {
-// 	console.log('HTTPS Server running on port 443')
-// })
+//? CERTIFICATE
 
-// Dependencies
-// const express = require('express')
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/privkey.pem', 'utf8')
+const certificate = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/cert.pem', 'utf8')
+const ca = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/chain.pem', 'utf8')
 
-// // Configure & Run the http server
-// const app = express()
+//? END CERTIFICATE
 
-// app.use(express.static(__dirname, { dotfiles: 'allow' }))
+const credentials = {
+	key: privateKey,
+	cert: certificate,
+	ca: ca,
+}
+app.use(forceSsl)
 
-// app.listen(80, () => {
-// 	console.log('HTTP server running on port 80')
-// })
+https.createServer(credentials, app).listen(443)
+
+//! END SSL //
