@@ -40,7 +40,7 @@
     "eslint": "^7.32.0",
     "fs": "^0.0.1-security",
     "node-sass": "^7.0.0",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.20",
     "sass": "^1.42.1"
   }
 }
