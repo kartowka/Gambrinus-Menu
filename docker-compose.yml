@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Gambrinus Menu App (MongoDB Atlas + Existing Traefik)
+  app:
+    build:
+      context: .
+      target: production
+    container_name: gambrinus-app
+    restart: unless-stopped
+    expose:
+      - "3000"
+    env_file:
+      - src/.env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gambrinus.rule=Host(`gambrinus.kartowka.win`) || Host(`gambrinus.co.il`)"
+      - "traefik.http.routers.gambrinus.entrypoints=web,websecure"
+      - "traefik.http.services.gambrinus.loadbalancer.server.port=3000"
+      - "traefik.http.routers.gambrinus.service=gambrinus"
+    networks:
+      - frontend
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1:3000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  frontend:
+    external: true

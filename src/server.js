@@ -1,8 +1,4 @@
 const express = require('express')
-// Configure & Run the http server
-const fs = require('fs')
-const http = require('http')
-const https = require('https')
 const mongoose = require('mongoose')
 const path = require('path')
 const routes = require('./routes/route')
@@ -12,24 +8,23 @@ const cookieParser = require('cookie-parser')
 const User = require('./models/admin_user')
 const jwt = require('jsonwebtoken')
 
+// Trust proxy headers (Traefik, Cloudflare, etc.)
+app.set('trust proxy', true)
+
 app.use(cookieParser())
 app.locals.userLoggedIn = 0
 app.locals.userID = ''
 app.locals.userRole = ''
+
 //.env
 require('dotenv').config({
 	path: path.join(__dirname, './.env'),
 })
 
-//connect to mongodb
-mongoose
-	.connect(process.env.dbURI, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
-	.then((result) => app.listen(3000), console.log('mongoDB connected.'))
-	.catch((err) => console.log(err))
+// Set Mongoose strictQuery option to suppress deprecation warning
+mongoose.set('strictQuery', false)
 
+// Configure Express middleware BEFORE connecting to database
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use(async (req, res, next) => {
@@ -72,36 +67,27 @@ app.use('/scripts', express.static(path.join(__dirname, '..', 'node_modules/acce
 
 app.use('/', routes)
 
-// Creating a connection
-// app.listen(appPort, () => {
-// 	console.log(`App is running. serve at port: ${appPort}`)
-// 	console.log(`http://127.0.0.1:${appPort}`)
-// })
-
-http.createServer(app).listen(80, () => {
-	console.log(`App is running. serve at port: ${process.env.PORT}`)
-	console.log(`http://127.0.0.1:${process.env.PORT}`)
-})
-
-//! SSL //
-
-const forceSsl = require('express-force-ssl')
-
-//? CERTIFICATE
-
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/privkey.pem', 'utf8')
-const certificate = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/cert.pem', 'utf8')
-const ca = fs.readFileSync('/etc/letsencrypt/live/www.gambrinus.co.il/chain.pem', 'utf8')
-
-//? END CERTIFICATE
-
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca,
-}
-app.use(forceSsl)
-
-https.createServer(credentials, app).listen(443)
-
-//! END SSL //
+//connect to mongodb and start server
+mongoose
+	.connect(process.env.dbURI, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		maxPoolSize: process.env.DB_MAX_POOL_SIZE || 10,
+		serverSelectionTimeoutMS: process.env.DB_SERVER_SELECTION_TIMEOUT_MS || 5000,
+		socketTimeoutMS: process.env.DB_SOCKET_TIMEOUT_MS || 45000,
+	})
+	.then(() => {
+		console.log('✅ MongoDB connected successfully')
+		// Start server only after DB connection
+		const PORT = process.env.PORT || 3000
+		app.listen(PORT, '0.0.0.0', () => {
+			console.log(`🚀 Server running on port ${PORT}`)
+			console.log(`📱 Environment: ${process.env.NODE_ENV || 'development'}`)
+			console.log(`🔒 SSL/TLS handled by reverse proxy`)
+			console.log(`🌐 Ready for: Traefik, Cloudflare, or direct access`)
+		})
+	})
+	.catch((err) => {
+		console.error('❌ MongoDB connection error:', err)
+		process.exit(1)
+	})

@@ -1,0 +1,83 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+package-lock.json
+
+# Environment files
+.env*
+!.env.example
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.eslintcache
+
+# OS files
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Docker files (avoid recursion)
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+
+# Documentation
+README.md
+LICENSE
+*.md
+docs/
+
+# Images and large assets (keep only essential ones)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+!src/assets/img/
+gambrinus.co.il-menu.png
+תפריט.docx
+
+# Test and development
+test/
+tests/
+spec/
+*.test.js
+*.spec.js
+coverage/
+.nyc_output/
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Logs and runtime
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+tmp/
+temp/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
